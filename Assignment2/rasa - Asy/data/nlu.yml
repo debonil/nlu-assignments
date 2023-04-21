@@ -1,0 +1,1791 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ceo
+  examples: |
+    - who is ceo of [Veooz](org)
+    - name of the ceo of [Veooz](org)
+    - ceo of [Veooz](org)
+    - who is chief executive officer of [Veooz](org)
+    - name of the chief executive officer of [Veooz](org)
+    - chief executive officer of [Veooz](org)
+    - who is ceo of [LPC Advisors](org)
+    - name of the ceo of [LPC Advisors](org)
+    - ceo of [LPC Advisors](org)
+    - who is chief executive officer of [LPC Advisors](org)
+    - name of the chief executive officer of [LPC Advisors](org)
+    - chief executive officer of [LPC Advisors](org)
+    - who is ceo of [Priyanshi films and entertainment](org)
+    - name of the ceo of [Priyanshi films and entertainment](org)
+    - ceo of [Priyanshi films and entertainment](org)
+    - who is chief executive officer of [Priyanshi films and entertainment](org)
+    - name of the chief executive officer of [Priyanshi films and entertainment](org)
+    - chief executive officer of [Priyanshi films and entertainment](org)
+    - who is ceo of [Symphony Towers](org)
+    - name of the ceo of [Symphony Towers](org)
+    - ceo of [Symphony Towers](org)
+    - who is chief executive officer of [Symphony Towers](org)
+    - name of the chief executive officer of [Symphony Towers](org)
+    - chief executive officer of [Symphony Towers](org)
+    - who is ceo of [Douglas Wilson Companies](org)
+    - name of the ceo of [Douglas Wilson Companies](org)
+    - ceo of [Douglas Wilson Companies](org)
+    - who is chief executive officer of [Douglas Wilson Companies](org)
+    - name of the chief executive officer of [Douglas Wilson Companies](org)
+    - chief executive officer of [Douglas Wilson Companies](org)
+    - who is ceo of [DWC](org)
+    - name of the ceo of [DWC](org)
+    - ceo of [DWC](org)
+    - who is chief executive officer of [DWC](org)
+    - name of the chief executive officer of [DWC](org)
+    - chief executive officer of [DWC](org)
+    - who is ceo of [Building and Housing Office](org)
+    - name of the ceo of [Building and Housing Office](org)
+    - ceo of [Building and Housing Office](org)
+    - who is chief executive officer of [Building and Housing Office](org)
+    - name of the chief executive officer of [Building and Housing Office](org)
+    - chief executive officer of [Building and Housing Office](org)
+    - who is ceo of [AYA Capital](org)
+    - name of the ceo of [AYA Capital](org)
+    - ceo of [AYA Capital](org)
+    - who is chief executive officer of [AYA Capital](org)
+    - name of the chief executive officer of [AYA Capital](org)
+    - chief executive officer of [AYA Capital](org)
+    - who is ceo of [Tufts Medical Center](org)
+    - name of the ceo of [Tufts Medical Center](org)
+    - ceo of [Tufts Medical Center](org)
+    - who is chief executive officer of [Tufts Medical Center](org)
+    - name of the chief executive officer of [Tufts Medical Center](org)
+    - chief executive officer of [Tufts Medical Center](org)
+    - who is ceo of [NDTV Imagine Ltd.](org)
+    - name of the ceo of [NDTV Imagine Ltd.](org)
+    - ceo of [NDTV Imagine Ltd.](org)
+    - who is chief executive officer of [NDTV Imagine Ltd.](org)
+    - name of the chief executive officer of [NDTV Imagine Ltd.](org)
+    - chief executive officer of [NDTV Imagine Ltd.](org)
+    - who is ceo of [Lumiere Movies](org)
+    - name of the ceo of [Lumiere Movies](org)
+    - ceo of [Lumiere Movies](org)
+    - who is chief executive officer of [Lumiere Movies](org)
+    - name of the chief executive officer of [Lumiere Movies](org)
+    - chief executive officer of [Lumiere Movies](org)
+    - who is ceo of [Lumière Movies](org)
+    - name of the ceo of [Lumière Movies](org)
+    - ceo of [Lumière Movies](org)
+    - who is chief executive officer of [Lumière Movies](org)
+    - name of the chief executive officer of [Lumière Movies](org)
+    - chief executive officer of [Lumière Movies](org)
+    - who is ceo of [Imagine](org)
+    - name of the ceo of [Imagine](org)
+    - ceo of [Imagine](org)
+    - who is chief executive officer of [Imagine](org)
+    - name of the chief executive officer of [Imagine](org)
+    - chief executive officer of [Imagine](org)
+    - who is ceo of [Irwin L. Jacobs](org)
+    - name of the ceo of [Irwin L. Jacobs](org)
+    - ceo of [Irwin L. Jacobs](org)
+    - who is chief executive officer of [Irwin L. Jacobs](org)
+    - name of the chief executive officer of [Irwin L. Jacobs](org)
+    - chief executive officer of [Irwin L. Jacobs](org)
+    - who is ceo of [CVN](org)
+    - name of the ceo of [CVN](org)
+    - ceo of [CVN](org)
+    - who is chief executive officer of [CVN](org)
+    - name of the chief executive officer of [CVN](org)
+    - chief executive officer of [CVN](org)
+    - who is ceo of [Genmar Holdings](org)
+    - name of the ceo of [Genmar Holdings](org)
+    - ceo of [Genmar Holdings](org)
+    - who is chief executive officer of [Genmar Holdings](org)
+    - name of the chief executive officer of [Genmar Holdings](org)
+    - chief executive officer of [Genmar Holdings](org)
+    - who is ceo of [COMB](org)
+    - name of the ceo of [COMB](org)
+    - ceo of [COMB](org)
+    - who is chief executive officer of [COMB](org)
+    - name of the chief executive officer of [COMB](org)
+    - chief executive officer of [COMB](org)
+    - who is ceo of [Close-out Merchandise Buyers](org)
+    - name of the ceo of [Close-out Merchandise Buyers](org)
+    - ceo of [Close-out Merchandise Buyers](org)
+    - who is chief executive officer of [Close-out Merchandise Buyers](org)
+    - name of the chief executive officer of [Close-out Merchandise Buyers](org)
+    - chief executive officer of [Close-out Merchandise Buyers](org)
+    - who is ceo of [Cable Value Network](org)
+    - name of the ceo of [Cable Value Network](org)
+    - ceo of [Cable Value Network](org)
+    - who is chief executive officer of [Cable Value Network](org)
+    - name of the chief executive officer of [Cable Value Network](org)
+    - chief executive officer of [Cable Value Network](org)
+    - who is ceo of [ATA](org)
+    - name of the ceo of [ATA](org)
+    - ceo of [ATA](org)
+    - who is chief executive officer of [ATA](org)
+    - name of the chief executive officer of [ATA](org)
+    - chief executive officer of [ATA](org)
+    - who is ceo of [American Trucking Associations](org)
+    - name of the ceo of [American Trucking Associations](org)
+    - ceo of [American Trucking Associations](org)
+    - who is chief executive officer of [American Trucking Associations](org)
+    - name of the chief executive officer of [American Trucking Associations](org)
+    - chief executive officer of [American Trucking Associations](org)
+    - who is ceo of [Keshet International](org)
+    - name of the ceo of [Keshet International](org)
+    - ceo of [Keshet International](org)
+    - who is chief executive officer of [Keshet International](org)
+    - name of the chief executive officer of [Keshet International](org)
+    - chief executive officer of [Keshet International](org)
+    - who is ceo of [Quickie Manufacturing Corporation](org)
+    - name of the ceo of [Quickie Manufacturing Corporation](org)
+    - ceo of [Quickie Manufacturing Corporation](org)
+    - who is chief executive officer of [Quickie Manufacturing Corporation](org)
+    - name of the chief executive officer of [Quickie Manufacturing Corporation](org)
+    - chief executive officer of [Quickie Manufacturing Corporation](org)
+    - who is ceo of [Odyssey Golf](org)
+    - name of the ceo of [Odyssey Golf](org)
+    - ceo of [Odyssey Golf](org)
+    - who is chief executive officer of [Odyssey Golf](org)
+    - name of the chief executive officer of [Odyssey Golf](org)
+    - chief executive officer of [Odyssey Golf](org)
+    - who is ceo of [Liebherr-International AG](org)
+    - name of the ceo of [Liebherr-International AG](org)
+    - ceo of [Liebherr-International AG](org)
+    - who is chief executive officer of [Liebherr-International AG](org)
+    - name of the chief executive officer of [Liebherr-International AG](org)
+    - chief executive officer of [Liebherr-International AG](org)
+    - who is ceo of [Hing Wa Lee Group](org)
+    - name of the ceo of [Hing Wa Lee Group](org)
+    - ceo of [Hing Wa Lee Group](org)
+    - who is chief executive officer of [Hing Wa Lee Group](org)
+    - name of the chief executive officer of [Hing Wa Lee Group](org)
+    - chief executive officer of [Hing Wa Lee Group](org)
+    - who is ceo of [Coyote](org)
+    - name of the ceo of [Coyote](org)
+    - ceo of [Coyote](org)
+    - who is chief executive officer of [Coyote](org)
+    - name of the chief executive officer of [Coyote](org)
+    - chief executive officer of [Coyote](org)
+    - who is ceo of [Compaq Computer Corporation](org)
+    - name of the ceo of [Compaq Computer Corporation](org)
+    - ceo of [Compaq Computer Corporation](org)
+    - who is chief executive officer of [Compaq Computer Corporation](org)
+    - name of the chief executive officer of [Compaq Computer Corporation](org)
+    - chief executive officer of [Compaq Computer Corporation](org)
+    - who is ceo of [Compaq](org)
+    - name of the ceo of [Compaq](org)
+    - ceo of [Compaq](org)
+    - who is chief executive officer of [Compaq](org)
+    - name of the chief executive officer of [Compaq](org)
+    - chief executive officer of [Compaq](org)
+    - who is ceo of [Fairfield Homes, Inc.](org)
+    - name of the ceo of [Fairfield Homes, Inc.](org)
+    - ceo of [Fairfield Homes, Inc.](org)
+    - who is chief executive officer of [Fairfield Homes, Inc.](org)
+    - name of the chief executive officer of [Fairfield Homes, Inc.](org)
+    - chief executive officer of [Fairfield Homes, Inc.](org)
+    - who is ceo of [Gorsuch Management](org)
+    - name of the ceo of [Gorsuch Management](org)
+    - ceo of [Gorsuch Management](org)
+    - who is chief executive officer of [Gorsuch Management](org)
+    - name of the chief executive officer of [Gorsuch Management](org)
+    - chief executive officer of [Gorsuch Management](org)
+    - who is ceo of [Safaricom](org)
+    - name of the ceo of [Safaricom](org)
+    - ceo of [Safaricom](org)
+    - who is chief executive officer of [Safaricom](org)
+    - name of the chief executive officer of [Safaricom](org)
+    - chief executive officer of [Safaricom](org)
+    - who is ceo of [Worldwide Aeros Corp](org)
+    - name of the ceo of [Worldwide Aeros Corp](org)
+    - ceo of [Worldwide Aeros Corp](org)
+    - who is chief executive officer of [Worldwide Aeros Corp](org)
+    - name of the chief executive officer of [Worldwide Aeros Corp](org)
+    - chief executive officer of [Worldwide Aeros Corp](org)
+    - who is ceo of [Viessmann Group](org)
+    - name of the ceo of [Viessmann Group](org)
+    - ceo of [Viessmann Group](org)
+    - who is chief executive officer of [Viessmann Group](org)
+    - name of the chief executive officer of [Viessmann Group](org)
+    - chief executive officer of [Viessmann Group](org)
+    - who is ceo of [Falcon International Bank](org)
+    - name of the ceo of [Falcon International Bank](org)
+    - ceo of [Falcon International Bank](org)
+    - who is chief executive officer of [Falcon International Bank](org)
+    - name of the chief executive officer of [Falcon International Bank](org)
+    - chief executive officer of [Falcon International Bank](org)
+    - who is ceo of [Atholl Sporting](org)
+    - name of the ceo of [Atholl Sporting](org)
+    - ceo of [Atholl Sporting](org)
+    - who is chief executive officer of [Atholl Sporting](org)
+    - name of the chief executive officer of [Atholl Sporting](org)
+    - chief executive officer of [Atholl Sporting](org)
+    - who is ceo of [FishPal](org)
+    - name of the ceo of [FishPal](org)
+    - ceo of [FishPal](org)
+    - who is chief executive officer of [FishPal](org)
+    - name of the chief executive officer of [FishPal](org)
+    - chief executive officer of [FishPal](org)
+    - who is ceo of [FishPal Ltd](org)
+    - name of the ceo of [FishPal Ltd](org)
+    - ceo of [FishPal Ltd](org)
+    - who is chief executive officer of [FishPal Ltd](org)
+    - name of the chief executive officer of [FishPal Ltd](org)
+    - chief executive officer of [FishPal Ltd](org)
+    - who is ceo of [Tweed Salmon Fishings](org)
+    - name of the ceo of [Tweed Salmon Fishings](org)
+    - ceo of [Tweed Salmon Fishings](org)
+    - who is chief executive officer of [Tweed Salmon Fishings](org)
+    - name of the chief executive officer of [Tweed Salmon Fishings](org)
+    - chief executive officer of [Tweed Salmon Fishings](org)
+    - who is ceo of [YSC](org)
+    - name of the ceo of [YSC](org)
+    - ceo of [YSC](org)
+    - who is chief executive officer of [YSC](org)
+    - name of the chief executive officer of [YSC](org)
+    - chief executive officer of [YSC](org)
+    - who is ceo of [Young Survival Coalition](org)
+    - name of the ceo of [Young Survival Coalition](org)
+    - ceo of [Young Survival Coalition](org)
+    - who is chief executive officer of [Young Survival Coalition](org)
+    - name of the chief executive officer of [Young Survival Coalition](org)
+    - chief executive officer of [Young Survival Coalition](org)
+    - who is ceo of [Citrus Studios](org)
+    - name of the ceo of [Citrus Studios](org)
+    - ceo of [Citrus Studios](org)
+    - who is chief executive officer of [Citrus Studios](org)
+    - name of the chief executive officer of [Citrus Studios](org)
+    - chief executive officer of [Citrus Studios](org)
+    - who is ceo of [The Waxing Company](org)
+    - name of the ceo of [The Waxing Company](org)
+    - ceo of [The Waxing Company](org)
+    - who is chief executive officer of [The Waxing Company](org)
+    - name of the chief executive officer of [The Waxing Company](org)
+    - chief executive officer of [The Waxing Company](org)
+    - who is ceo of [Tesco](org)
+    - name of the ceo of [Tesco](org)
+    - ceo of [Tesco](org)
+    - who is chief executive officer of [Tesco](org)
+    - name of the chief executive officer of [Tesco](org)
+    - chief executive officer of [Tesco](org)
+    - who is ceo of [Morrisons](org)
+    - name of the ceo of [Morrisons](org)
+    - ceo of [Morrisons](org)
+    - who is chief executive officer of [Morrisons](org)
+    - name of the chief executive officer of [Morrisons](org)
+    - chief executive officer of [Morrisons](org)
+    - who is ceo of [Waitrose](org)
+    - name of the ceo of [Waitrose](org)
+    - ceo of [Waitrose](org)
+    - who is chief executive officer of [Waitrose](org)
+    - name of the chief executive officer of [Waitrose](org)
+    - chief executive officer of [Waitrose](org)
+    - who is ceo of [Superdrug](org)
+    - name of the ceo of [Superdrug](org)
+    - ceo of [Superdrug](org)
+    - who is chief executive officer of [Superdrug](org)
+    - name of the chief executive officer of [Superdrug](org)
+    - chief executive officer of [Superdrug](org)
+    - who is ceo of [Sainsbury's](org)
+    - name of the ceo of [Sainsbury's](org)
+    - ceo of [Sainsbury's](org)
+    - who is chief executive officer of [Sainsbury's](org)
+    - name of the chief executive officer of [Sainsbury's](org)
+    - chief executive officer of [Sainsbury's](org)
+    - who is ceo of [Asda](org)
+    - name of the ceo of [Asda](org)
+    - ceo of [Asda](org)
+    - who is chief executive officer of [Asda](org)
+    - name of the chief executive officer of [Asda](org)
+    - chief executive officer of [Asda](org)
+    - who is ceo of [PJ Smoothies](org)
+    - name of the ceo of [PJ Smoothies](org)
+    - ceo of [PJ Smoothies](org)
+    - who is chief executive officer of [PJ Smoothies](org)
+    - name of the chief executive officer of [PJ Smoothies](org)
+    - chief executive officer of [PJ Smoothies](org)
+    - who is ceo of [AIM Your Way](org)
+    - name of the ceo of [AIM Your Way](org)
+    - ceo of [AIM Your Way](org)
+    - who is chief executive officer of [AIM Your Way](org)
+    - name of the chief executive officer of [AIM Your Way](org)
+    - chief executive officer of [AIM Your Way](org)
+    - who is ceo of [AIM](org)
+    - name of the ceo of [AIM](org)
+    - ceo of [AIM](org)
+    - who is chief executive officer of [AIM](org)
+    - name of the chief executive officer of [AIM](org)
+    - chief executive officer of [AIM](org)
+    - who is ceo of [AIM Your Way, LLC](org)
+    - name of the ceo of [AIM Your Way, LLC](org)
+    - ceo of [AIM Your Way, LLC](org)
+    - who is chief executive officer of [AIM Your Way, LLC](org)
+    - name of the chief executive officer of [AIM Your Way, LLC](org)
+    - chief executive officer of [AIM Your Way, LLC](org)
+    - who is ceo of [PHLPost](org)
+    - name of the ceo of [PHLPost](org)
+    - ceo of [PHLPost](org)
+    - who is chief executive officer of [PHLPost](org)
+    - name of the chief executive officer of [PHLPost](org)
+    - chief executive officer of [PHLPost](org)
+    - who is ceo of [AccuWeather](org)
+    - name of the ceo of [AccuWeather](org)
+    - ceo of [AccuWeather](org)
+    - who is chief executive officer of [AccuWeather](org)
+    - name of the chief executive officer of [AccuWeather](org)
+    - chief executive officer of [AccuWeather](org)
+ 
+- intent: founder
+  examples: |
+    - who is founder of [Barker's Tire City](org)
+    - name of the founder of [Barker's Tire City](org)
+    - founder of [Barker's Tire City](org)
+    - who foundeed [Barker's Tire City](org)
+    - who is founder of [Muffler City](org)
+    - name of the founder of [Muffler City](org)
+    - founder of [Muffler City](org)
+    - who foundeed [Muffler City](org)
+    - who is founder of [LPC Advisors](org)
+    - name of the founder of [LPC Advisors](org)
+    - founder of [LPC Advisors](org)
+    - who foundeed [LPC Advisors](org)
+    - who is founder of [Priyanshi films and entertainment](org)
+    - name of the founder of [Priyanshi films and entertainment](org)
+    - founder of [Priyanshi films and entertainment](org)
+    - who foundeed [Priyanshi films and entertainment](org)
+    - who is founder of [LUV](org)
+    - name of the founder of [LUV](org)
+    - founder of [LUV](org)
+    - who foundeed [LUV](org)
+    - who is founder of [Southwest Airlines](org)
+    - name of the founder of [Southwest Airlines](org)
+    - founder of [Southwest Airlines](org)
+    - who foundeed [Southwest Airlines](org)
+    - who is founder of [Southwest Airlines Co.](org)
+    - name of the founder of [Southwest Airlines Co.](org)
+    - founder of [Southwest Airlines Co.](org)
+    - who foundeed [Southwest Airlines Co.](org)
+    - who is founder of [Hawaii School for Girls](org)
+    - name of the founder of [Hawaii School for Girls](org)
+    - founder of [Hawaii School for Girls](org)
+    - who foundeed [Hawaii School for Girls](org)
+    - who is founder of [La Pietra](org)
+    - name of the founder of [La Pietra](org)
+    - founder of [La Pietra](org)
+    - who foundeed [La Pietra](org)
+    - who is founder of [La Pietra: Hawaii School for Girls](org)
+    - name of the founder of [La Pietra: Hawaii School for Girls](org)
+    - founder of [La Pietra: Hawaii School for Girls](org)
+    - who foundeed [La Pietra: Hawaii School for Girls](org)
+    - who is founder of [Bethesda Game Studios Dallas LLC](org)
+    - name of the founder of [Bethesda Game Studios Dallas LLC](org)
+    - founder of [Bethesda Game Studios Dallas LLC](org)
+    - who foundeed [Bethesda Game Studios Dallas LLC](org)
+    - who is founder of [Escalation Studios](org)
+    - name of the founder of [Escalation Studios](org)
+    - founder of [Escalation Studios](org)
+    - who foundeed [Escalation Studios](org)
+    - who is founder of [Free Software Foundation](org)
+    - name of the founder of [Free Software Foundation](org)
+    - founder of [Free Software Foundation](org)
+    - who foundeed [Free Software Foundation](org)
+    - who is founder of [FSF](org)
+    - name of the founder of [FSF](org)
+    - founder of [FSF](org)
+    - who foundeed [FSF](org)
+    - who is founder of [Low Cost Vans Bristol Ltd](org)
+    - name of the founder of [Low Cost Vans Bristol Ltd](org)
+    - founder of [Low Cost Vans Bristol Ltd](org)
+    - who foundeed [Low Cost Vans Bristol Ltd](org)
+    - who is founder of [Low Cost Vans Bristol](org)
+    - name of the founder of [Low Cost Vans Bristol](org)
+    - founder of [Low Cost Vans Bristol](org)
+    - who foundeed [Low Cost Vans Bristol](org)
+    - who is founder of [Cascade Family Medicine](org)
+    - name of the founder of [Cascade Family Medicine](org)
+    - founder of [Cascade Family Medicine](org)
+    - who foundeed [Cascade Family Medicine](org)
+    - who is founder of [Salmon Brothers Construction Company](org)
+    - name of the founder of [Salmon Brothers Construction Company](org)
+    - founder of [Salmon Brothers Construction Company](org)
+    - who foundeed [Salmon Brothers Construction Company](org)
+    - who is founder of [The Human Life Review](org)
+    - name of the founder of [The Human Life Review](org)
+    - founder of [The Human Life Review](org)
+    - who foundeed [The Human Life Review](org)
+    - who is founder of [Human Life Foundation](org)
+    - name of the founder of [Human Life Foundation](org)
+    - founder of [Human Life Foundation](org)
+    - who foundeed [Human Life Foundation](org)
+    - who is founder of [Infocom](org)
+    - name of the founder of [Infocom](org)
+    - founder of [Infocom](org)
+    - who foundeed [Infocom](org)
+    - who is founder of [Preston Gates & Ellis](org)
+    - name of the founder of [Preston Gates & Ellis](org)
+    - founder of [Preston Gates & Ellis](org)
+    - who foundeed [Preston Gates & Ellis](org)
+    - who is founder of [Microsoft](org)
+    - name of the founder of [Microsoft](org)
+    - founder of [Microsoft](org)
+    - who foundeed [Microsoft](org)
+    - who is founder of [Institute of International Relations (Turkmenistan)](org)
+    - name of the founder of [Institute of International Relations (Turkmenistan)](org)
+    - founder of [Institute of International Relations (Turkmenistan)](org)
+    - who foundeed [Institute of International Relations (Turkmenistan)](org)
+    - who is founder of [Microsoft](org)
+    - name of the founder of [Microsoft](org)
+    - founder of [Microsoft](org)
+    - who foundeed [Microsoft](org)
+    - who is founder of [All Blacks](org)
+    - name of the founder of [All Blacks](org)
+    - founder of [All Blacks](org)
+    - who foundeed [All Blacks](org)
+    - who is founder of [Manawatu Evening Standard](org)
+    - name of the founder of [Manawatu Evening Standard](org)
+    - founder of [Manawatu Evening Standard](org)
+    - who foundeed [Manawatu Evening Standard](org)
+    - who is founder of [Sun Online Solutions](org)
+    - name of the founder of [Sun Online Solutions](org)
+    - founder of [Sun Online Solutions](org)
+    - who foundeed [Sun Online Solutions](org)
+    - who is founder of [Sun Online Solutions Pvt. Ltd.](org)
+    - name of the founder of [Sun Online Solutions Pvt. Ltd.](org)
+    - founder of [Sun Online Solutions Pvt. Ltd.](org)
+    - who foundeed [Sun Online Solutions Pvt. Ltd.](org)
+    - who is founder of [Bergen-Lafayette Montessori School](org)
+    - name of the founder of [Bergen-Lafayette Montessori School](org)
+    - founder of [Bergen-Lafayette Montessori School](org)
+    - who foundeed [Bergen-Lafayette Montessori School](org)
+    - who is founder of [United Nations Children's Fund](org)
+    - name of the founder of [United Nations Children's Fund](org)
+    - founder of [United Nations Children's Fund](org)
+    - who foundeed [United Nations Children's Fund](org)
+    - who is founder of [UNICEF](org)
+    - name of the founder of [UNICEF](org)
+    - founder of [UNICEF](org)
+    - who foundeed [UNICEF](org)
+    - who is founder of [Champions Soccer Radio Network](org)
+    - name of the founder of [Champions Soccer Radio Network](org)
+    - founder of [Champions Soccer Radio Network](org)
+    - who foundeed [Champions Soccer Radio Network](org)
+    - who is founder of [CSRN](org)
+    - name of the founder of [CSRN](org)
+    - founder of [CSRN](org)
+    - who foundeed [CSRN](org)
+    - who is founder of [Worldwide Aeros Corp](org)
+    - name of the founder of [Worldwide Aeros Corp](org)
+    - founder of [Worldwide Aeros Corp](org)
+    - who foundeed [Worldwide Aeros Corp](org)
+    - who is founder of [Citizens United for Research in Epilepsy](org)
+    - name of the founder of [Citizens United for Research in Epilepsy](org)
+    - founder of [Citizens United for Research in Epilepsy](org)
+    - who foundeed [Citizens United for Research in Epilepsy](org)
+    - who is founder of [Alternative Tentacles](org)
+    - name of the founder of [Alternative Tentacles](org)
+    - founder of [Alternative Tentacles](org)
+    - who foundeed [Alternative Tentacles](org)
+    - who is founder of [Island Records](org)
+    - name of the founder of [Island Records](org)
+    - founder of [Island Records](org)
+    - who foundeed [Island Records](org)
+    - who is founder of [Citrus Studios](org)
+    - name of the founder of [Citrus Studios](org)
+    - founder of [Citrus Studios](org)
+    - who foundeed [Citrus Studios](org)
+    - who is founder of [The Waxing Company](org)
+    - name of the founder of [The Waxing Company](org)
+    - founder of [The Waxing Company](org)
+    - who foundeed [The Waxing Company](org)
+    - who is founder of [Joy Division](org)
+    - name of the founder of [Joy Division](org)
+    - founder of [Joy Division](org)
+    - who foundeed [Joy Division](org)
+    - who is founder of [Bill & Melinda Gates Foundation](org)
+    - name of the founder of [Bill & Melinda Gates Foundation](org)
+    - founder of [Bill & Melinda Gates Foundation](org)
+    - who foundeed [Bill & Melinda Gates Foundation](org)
+    - who is founder of [Gates Foundation](org)
+    - name of the founder of [Gates Foundation](org)
+    - founder of [Gates Foundation](org)
+    - who foundeed [Gates Foundation](org)
+    - who is founder of [BMGF](org)
+    - name of the founder of [BMGF](org)
+    - founder of [BMGF](org)
+    - who foundeed [BMGF](org)
+    - who is founder of [Standard Oil](org)
+    - name of the founder of [Standard Oil](org)
+    - founder of [Standard Oil](org)
+    - who foundeed [Standard Oil](org)
+    - who is founder of [Sierra](org)
+    - name of the founder of [Sierra](org)
+    - founder of [Sierra](org)
+    - who foundeed [Sierra](org)
+    - who is founder of [On-Line Systems](org)
+    - name of the founder of [On-Line Systems](org)
+    - founder of [On-Line Systems](org)
+    - who foundeed [On-Line Systems](org)
+    - who is founder of [Sierra On-Line](org)
+    - name of the founder of [Sierra On-Line](org)
+    - founder of [Sierra On-Line](org)
+    - who foundeed [Sierra On-Line](org)
+    - who is founder of [Sierra Entertainment](org)
+    - name of the founder of [Sierra Entertainment](org)
+    - founder of [Sierra Entertainment](org)
+    - who foundeed [Sierra Entertainment](org)
+
+- intent: location
+  examples: |
+    - where is [Reverend](org)
+    - where is headquarter of [Reverend](org)
+    - where is head quarter of [Reverend](org)
+    - location of [Reverend](org)
+    - headquarter of [Reverend](org)
+    - head quarter of [Reverend](org)
+    - where is [Veooz](org)
+    - where is headquarter of [Veooz](org)
+    - where is head quarter of [Veooz](org)
+    - location of [Veooz](org)
+    - headquarter of [Veooz](org)
+    - head quarter of [Veooz](org)
+    - where is [Symphony Towers](org)
+    - where is headquarter of [Symphony Towers](org)
+    - where is head quarter of [Symphony Towers](org)
+    - location of [Symphony Towers](org)
+    - headquarter of [Symphony Towers](org)
+    - head quarter of [Symphony Towers](org)
+    - where is [Douglas Wilson Companies](org)
+    - where is headquarter of [Douglas Wilson Companies](org)
+    - where is head quarter of [Douglas Wilson Companies](org)
+    - location of [Douglas Wilson Companies](org)
+    - headquarter of [Douglas Wilson Companies](org)
+    - head quarter of [Douglas Wilson Companies](org)
+    - where is [DWC](org)
+    - where is headquarter of [DWC](org)
+    - where is head quarter of [DWC](org)
+    - location of [DWC](org)
+    - headquarter of [DWC](org)
+    - head quarter of [DWC](org)
+    - where is [LUV](org)
+    - where is headquarter of [LUV](org)
+    - where is head quarter of [LUV](org)
+    - location of [LUV](org)
+    - headquarter of [LUV](org)
+    - head quarter of [LUV](org)
+    - where is [Southwest Airlines](org)
+    - where is headquarter of [Southwest Airlines](org)
+    - where is head quarter of [Southwest Airlines](org)
+    - location of [Southwest Airlines](org)
+    - headquarter of [Southwest Airlines](org)
+    - head quarter of [Southwest Airlines](org)
+    - where is [Southwest Airlines Co.](org)
+    - where is headquarter of [Southwest Airlines Co.](org)
+    - where is head quarter of [Southwest Airlines Co.](org)
+    - location of [Southwest Airlines Co.](org)
+    - headquarter of [Southwest Airlines Co.](org)
+    - head quarter of [Southwest Airlines Co.](org)
+    - where is [Hawaii School for Girls](org)
+    - where is headquarter of [Hawaii School for Girls](org)
+    - where is head quarter of [Hawaii School for Girls](org)
+    - location of [Hawaii School for Girls](org)
+    - headquarter of [Hawaii School for Girls](org)
+    - head quarter of [Hawaii School for Girls](org)
+    - where is [La Pietra](org)
+    - where is headquarter of [La Pietra](org)
+    - where is head quarter of [La Pietra](org)
+    - location of [La Pietra](org)
+    - headquarter of [La Pietra](org)
+    - head quarter of [La Pietra](org)
+    - where is [La Pietra: Hawaii School for Girls](org)
+    - where is headquarter of [La Pietra: Hawaii School for Girls](org)
+    - where is head quarter of [La Pietra: Hawaii School for Girls](org)
+    - location of [La Pietra: Hawaii School for Girls](org)
+    - headquarter of [La Pietra: Hawaii School for Girls](org)
+    - head quarter of [La Pietra: Hawaii School for Girls](org)
+    - where is [LOT Polish Airlines](org)
+    - where is headquarter of [LOT Polish Airlines](org)
+    - where is head quarter of [LOT Polish Airlines](org)
+    - location of [LOT Polish Airlines](org)
+    - headquarter of [LOT Polish Airlines](org)
+    - head quarter of [LOT Polish Airlines](org)
+    - where is [Central Glass Company](org)
+    - where is headquarter of [Central Glass Company](org)
+    - where is head quarter of [Central Glass Company](org)
+    - location of [Central Glass Company](org)
+    - headquarter of [Central Glass Company](org)
+    - head quarter of [Central Glass Company](org)
+    - where is [Central Glass](org)
+    - where is headquarter of [Central Glass](org)
+    - where is head quarter of [Central Glass](org)
+    - location of [Central Glass](org)
+    - headquarter of [Central Glass](org)
+    - head quarter of [Central Glass](org)
+    - where is [Tufts Medical Center](org)
+    - where is headquarter of [Tufts Medical Center](org)
+    - where is head quarter of [Tufts Medical Center](org)
+    - location of [Tufts Medical Center](org)
+    - headquarter of [Tufts Medical Center](org)
+    - head quarter of [Tufts Medical Center](org)
+    - where is [Ashinaga (organization)](org)
+    - where is headquarter of [Ashinaga (organization)](org)
+    - where is head quarter of [Ashinaga (organization)](org)
+    - location of [Ashinaga (organization)](org)
+    - headquarter of [Ashinaga (organization)](org)
+    - head quarter of [Ashinaga (organization)](org)
+    - where is [Ashinaga](org)
+    - where is headquarter of [Ashinaga](org)
+    - where is head quarter of [Ashinaga](org)
+    - location of [Ashinaga](org)
+    - headquarter of [Ashinaga](org)
+    - head quarter of [Ashinaga](org)
+    - where is [あしなが育英会](org)
+    - where is headquarter of [あしなが育英会](org)
+    - where is head quarter of [あしなが育英会](org)
+    - location of [あしなが育英会](org)
+    - headquarter of [あしなが育英会](org)
+    - head quarter of [あしなが育英会](org)
+    - where is [Ashinaga Ikueikai](org)
+    - where is headquarter of [Ashinaga Ikueikai](org)
+    - where is head quarter of [Ashinaga Ikueikai](org)
+    - location of [Ashinaga Ikueikai](org)
+    - headquarter of [Ashinaga Ikueikai](org)
+    - head quarter of [Ashinaga Ikueikai](org)
+    - where is [NDTV Imagine Ltd.](org)
+    - where is headquarter of [NDTV Imagine Ltd.](org)
+    - where is head quarter of [NDTV Imagine Ltd.](org)
+    - location of [NDTV Imagine Ltd.](org)
+    - headquarter of [NDTV Imagine Ltd.](org)
+    - head quarter of [NDTV Imagine Ltd.](org)
+    - where is [Lumiere Movies](org)
+    - where is headquarter of [Lumiere Movies](org)
+    - where is head quarter of [Lumiere Movies](org)
+    - location of [Lumiere Movies](org)
+    - headquarter of [Lumiere Movies](org)
+    - head quarter of [Lumiere Movies](org)
+    - where is [Lumière Movies](org)
+    - where is headquarter of [Lumière Movies](org)
+    - where is head quarter of [Lumière Movies](org)
+    - location of [Lumière Movies](org)
+    - headquarter of [Lumière Movies](org)
+    - head quarter of [Lumière Movies](org)
+    - where is [Imagine](org)
+    - where is headquarter of [Imagine](org)
+    - where is head quarter of [Imagine](org)
+    - location of [Imagine](org)
+    - headquarter of [Imagine](org)
+    - head quarter of [Imagine](org)
+    - where is [Government Communications Headquarters](org)
+    - where is headquarter of [Government Communications Headquarters](org)
+    - where is head quarter of [Government Communications Headquarters](org)
+    - location of [Government Communications Headquarters](org)
+    - headquarter of [Government Communications Headquarters](org)
+    - head quarter of [Government Communications Headquarters](org)
+    - where is [ACS](org)
+    - where is headquarter of [ACS](org)
+    - where is head quarter of [ACS](org)
+    - location of [ACS](org)
+    - headquarter of [ACS](org)
+    - head quarter of [ACS](org)
+    - where is [AUTOMATED CONVEYOR SYSTEMS, INC.](org)
+    - where is headquarter of [AUTOMATED CONVEYOR SYSTEMS, INC.](org)
+    - where is head quarter of [AUTOMATED CONVEYOR SYSTEMS, INC.](org)
+    - location of [AUTOMATED CONVEYOR SYSTEMS, INC.](org)
+    - headquarter of [AUTOMATED CONVEYOR SYSTEMS, INC.](org)
+    - head quarter of [AUTOMATED CONVEYOR SYSTEMS, INC.](org)
+    - where is [Bethesda Game Studios Dallas LLC](org)
+    - where is headquarter of [Bethesda Game Studios Dallas LLC](org)
+    - where is head quarter of [Bethesda Game Studios Dallas LLC](org)
+    - location of [Bethesda Game Studios Dallas LLC](org)
+    - headquarter of [Bethesda Game Studios Dallas LLC](org)
+    - head quarter of [Bethesda Game Studios Dallas LLC](org)
+    - where is [Escalation Studios](org)
+    - where is headquarter of [Escalation Studios](org)
+    - where is head quarter of [Escalation Studios](org)
+    - location of [Escalation Studios](org)
+    - headquarter of [Escalation Studios](org)
+    - head quarter of [Escalation Studios](org)
+    - where is [Free Software Foundation](org)
+    - where is headquarter of [Free Software Foundation](org)
+    - where is head quarter of [Free Software Foundation](org)
+    - location of [Free Software Foundation](org)
+    - headquarter of [Free Software Foundation](org)
+    - head quarter of [Free Software Foundation](org)
+    - where is [FSF](org)
+    - where is headquarter of [FSF](org)
+    - where is head quarter of [FSF](org)
+    - location of [FSF](org)
+    - headquarter of [FSF](org)
+    - head quarter of [FSF](org)
+    - where is [Low Cost Vans Bristol Ltd](org)
+    - where is headquarter of [Low Cost Vans Bristol Ltd](org)
+    - where is head quarter of [Low Cost Vans Bristol Ltd](org)
+    - location of [Low Cost Vans Bristol Ltd](org)
+    - headquarter of [Low Cost Vans Bristol Ltd](org)
+    - head quarter of [Low Cost Vans Bristol Ltd](org)
+    - where is [Low Cost Vans Bristol](org)
+    - where is headquarter of [Low Cost Vans Bristol](org)
+    - where is head quarter of [Low Cost Vans Bristol](org)
+    - location of [Low Cost Vans Bristol](org)
+    - headquarter of [Low Cost Vans Bristol](org)
+    - head quarter of [Low Cost Vans Bristol](org)
+    - where is [American Hardware Manufacturers Association](org)
+    - where is headquarter of [American Hardware Manufacturers Association](org)
+    - where is head quarter of [American Hardware Manufacturers Association](org)
+    - location of [American Hardware Manufacturers Association](org)
+    - headquarter of [American Hardware Manufacturers Association](org)
+    - head quarter of [American Hardware Manufacturers Association](org)
+    - where is [AHMA](org)
+    - where is headquarter of [AHMA](org)
+    - where is head quarter of [AHMA](org)
+    - location of [AHMA](org)
+    - headquarter of [AHMA](org)
+    - head quarter of [AHMA](org)
+    - where is [National Transitional Council](org)
+    - where is headquarter of [National Transitional Council](org)
+    - where is head quarter of [National Transitional Council](org)
+    - location of [National Transitional Council](org)
+    - headquarter of [National Transitional Council](org)
+    - head quarter of [National Transitional Council](org)
+    - where is [Foundation Medicine](org)
+    - where is headquarter of [Foundation Medicine](org)
+    - where is head quarter of [Foundation Medicine](org)
+    - location of [Foundation Medicine](org)
+    - headquarter of [Foundation Medicine](org)
+    - head quarter of [Foundation Medicine](org)
+    - where is [Foundation Medicine, Inc.](org)
+    - where is headquarter of [Foundation Medicine, Inc.](org)
+    - where is head quarter of [Foundation Medicine, Inc.](org)
+    - location of [Foundation Medicine, Inc.](org)
+    - headquarter of [Foundation Medicine, Inc.](org)
+    - head quarter of [Foundation Medicine, Inc.](org)
+    - where is [Japanese American National Museum](org)
+    - where is headquarter of [Japanese American National Museum](org)
+    - where is head quarter of [Japanese American National Museum](org)
+    - location of [Japanese American National Museum](org)
+    - headquarter of [Japanese American National Museum](org)
+    - head quarter of [Japanese American National Museum](org)
+    - where is [Irene Hirano](org)
+    - where is headquarter of [Irene Hirano](org)
+    - where is head quarter of [Irene Hirano](org)
+    - location of [Irene Hirano](org)
+    - headquarter of [Irene Hirano](org)
+    - head quarter of [Irene Hirano](org)
+    - where is [U.S.-Japan Council](org)
+    - where is headquarter of [U.S.-Japan Council](org)
+    - where is head quarter of [U.S.-Japan Council](org)
+    - location of [U.S.-Japan Council](org)
+    - headquarter of [U.S.-Japan Council](org)
+    - head quarter of [U.S.-Japan Council](org)
+    - where is [Infocom](org)
+    - where is headquarter of [Infocom](org)
+    - where is head quarter of [Infocom](org)
+    - location of [Infocom](org)
+    - headquarter of [Infocom](org)
+    - head quarter of [Infocom](org)
+    - where is [River City Contractors](org)
+    - where is headquarter of [River City Contractors](org)
+    - where is head quarter of [River City Contractors](org)
+    - location of [River City Contractors](org)
+    - headquarter of [River City Contractors](org)
+    - head quarter of [River City Contractors](org)
+    - where is [River City Contractors, Inc.](org)
+    - where is headquarter of [River City Contractors, Inc.](org)
+    - where is head quarter of [River City Contractors, Inc.](org)
+    - location of [River City Contractors, Inc.](org)
+    - headquarter of [River City Contractors, Inc.](org)
+    - head quarter of [River City Contractors, Inc.](org)
+    - where is [FROMM Packaging Ltd](org)
+    - where is headquarter of [FROMM Packaging Ltd](org)
+    - where is head quarter of [FROMM Packaging Ltd](org)
+    - location of [FROMM Packaging Ltd](org)
+    - headquarter of [FROMM Packaging Ltd](org)
+    - head quarter of [FROMM Packaging Ltd](org)
+    - where is [Preston Gates & Ellis](org)
+    - where is headquarter of [Preston Gates & Ellis](org)
+    - where is head quarter of [Preston Gates & Ellis](org)
+    - location of [Preston Gates & Ellis](org)
+    - headquarter of [Preston Gates & Ellis](org)
+    - head quarter of [Preston Gates & Ellis](org)
+    - where is [Microsoft](org)
+    - where is headquarter of [Microsoft](org)
+    - where is head quarter of [Microsoft](org)
+    - location of [Microsoft](org)
+    - headquarter of [Microsoft](org)
+    - head quarter of [Microsoft](org)
+    - where is [Trish Lake](org)
+    - where is headquarter of [Trish Lake](org)
+    - where is head quarter of [Trish Lake](org)
+    - location of [Trish Lake](org)
+    - headquarter of [Trish Lake](org)
+    - head quarter of [Trish Lake](org)
+    - where is [Freshwater Pictures](org)
+    - where is headquarter of [Freshwater Pictures](org)
+    - where is head quarter of [Freshwater Pictures](org)
+    - location of [Freshwater Pictures](org)
+    - headquarter of [Freshwater Pictures](org)
+    - head quarter of [Freshwater Pictures](org)
+    - where is [Chittenden & Eastman Company](org)
+    - where is headquarter of [Chittenden & Eastman Company](org)
+    - where is head quarter of [Chittenden & Eastman Company](org)
+    - location of [Chittenden & Eastman Company](org)
+    - headquarter of [Chittenden & Eastman Company](org)
+    - head quarter of [Chittenden & Eastman Company](org)
+    - where is [The European Courier](org)
+    - where is headquarter of [The European Courier](org)
+    - where is head quarter of [The European Courier](org)
+    - location of [The European Courier](org)
+    - headquarter of [The European Courier](org)
+    - head quarter of [The European Courier](org)
+    - where is [European Courier](org)
+    - where is headquarter of [European Courier](org)
+    - where is head quarter of [European Courier](org)
+    - location of [European Courier](org)
+    - headquarter of [European Courier](org)
+    - head quarter of [European Courier](org)
+    - where is [All Blacks](org)
+    - where is headquarter of [All Blacks](org)
+    - where is head quarter of [All Blacks](org)
+    - location of [All Blacks](org)
+    - headquarter of [All Blacks](org)
+    - head quarter of [All Blacks](org)
+    - where is [Manawatu Evening Standard](org)
+    - where is headquarter of [Manawatu Evening Standard](org)
+    - where is head quarter of [Manawatu Evening Standard](org)
+    - location of [Manawatu Evening Standard](org)
+    - headquarter of [Manawatu Evening Standard](org)
+    - head quarter of [Manawatu Evening Standard](org)
+    - where is [One Percent](org)
+    - where is headquarter of [One Percent](org)
+    - where is head quarter of [One Percent](org)
+    - location of [One Percent](org)
+    - headquarter of [One Percent](org)
+    - head quarter of [One Percent](org)
+    - where is [Lynyrd Skynyrd](org)
+    - where is headquarter of [Lynyrd Skynyrd](org)
+    - where is head quarter of [Lynyrd Skynyrd](org)
+    - location of [Lynyrd Skynyrd](org)
+    - headquarter of [Lynyrd Skynyrd](org)
+    - head quarter of [Lynyrd Skynyrd](org)
+    - where is [My Backyard](org)
+    - where is headquarter of [My Backyard](org)
+    - where is head quarter of [My Backyard](org)
+    - location of [My Backyard](org)
+    - headquarter of [My Backyard](org)
+    - head quarter of [My Backyard](org)
+    - where is [Noble Five](org)
+    - where is headquarter of [Noble Five](org)
+    - where is head quarter of [Noble Five](org)
+    - location of [Noble Five](org)
+    - headquarter of [Noble Five](org)
+    - head quarter of [Noble Five](org)
+    - where is [Association of Consultants](org)
+    - where is headquarter of [Association of Consultants](org)
+    - where is head quarter of [Association of Consultants](org)
+    - location of [Association of Consultants](org)
+    - headquarter of [Association of Consultants](org)
+    - head quarter of [Association of Consultants](org)
+    - where is [Hing Wa Lee Group](org)
+    - where is headquarter of [Hing Wa Lee Group](org)
+    - where is head quarter of [Hing Wa Lee Group](org)
+    - location of [Hing Wa Lee Group](org)
+    - headquarter of [Hing Wa Lee Group](org)
+    - head quarter of [Hing Wa Lee Group](org)
+    - where is [Compaq Computer Corporation](org)
+    - where is headquarter of [Compaq Computer Corporation](org)
+    - where is head quarter of [Compaq Computer Corporation](org)
+    - location of [Compaq Computer Corporation](org)
+    - headquarter of [Compaq Computer Corporation](org)
+    - head quarter of [Compaq Computer Corporation](org)
+    - where is [Compaq](org)
+    - where is headquarter of [Compaq](org)
+    - where is head quarter of [Compaq](org)
+    - location of [Compaq](org)
+    - headquarter of [Compaq](org)
+    - head quarter of [Compaq](org)
+    - where is [Versare Car Company](org)
+    - where is headquarter of [Versare Car Company](org)
+    - where is head quarter of [Versare Car Company](org)
+    - location of [Versare Car Company](org)
+    - headquarter of [Versare Car Company](org)
+    - head quarter of [Versare Car Company](org)
+    - where is [Lockheed Martin](org)
+    - where is headquarter of [Lockheed Martin](org)
+    - where is head quarter of [Lockheed Martin](org)
+    - location of [Lockheed Martin](org)
+    - headquarter of [Lockheed Martin](org)
+    - head quarter of [Lockheed Martin](org)
+    - where is [United Nations Children's Fund](org)
+    - where is headquarter of [United Nations Children's Fund](org)
+    - where is head quarter of [United Nations Children's Fund](org)
+    - location of [United Nations Children's Fund](org)
+    - headquarter of [United Nations Children's Fund](org)
+    - head quarter of [United Nations Children's Fund](org)
+    - where is [UNICEF](org)
+    - where is headquarter of [UNICEF](org)
+    - where is head quarter of [UNICEF](org)
+    - location of [UNICEF](org)
+    - headquarter of [UNICEF](org)
+    - head quarter of [UNICEF](org)
+    - where is [Gibbs Chevrolet](org)
+    - where is headquarter of [Gibbs Chevrolet](org)
+    - where is head quarter of [Gibbs Chevrolet](org)
+    - location of [Gibbs Chevrolet](org)
+    - headquarter of [Gibbs Chevrolet](org)
+    - head quarter of [Gibbs Chevrolet](org)
+    - where is [Agricultural School](org)
+    - where is headquarter of [Agricultural School](org)
+    - where is head quarter of [Agricultural School](org)
+    - location of [Agricultural School](org)
+    - headquarter of [Agricultural School](org)
+    - head quarter of [Agricultural School](org)
+    - where is [NWSA](org)
+    - where is headquarter of [NWSA](org)
+    - where is head quarter of [NWSA](org)
+    - location of [NWSA](org)
+    - headquarter of [NWSA](org)
+    - head quarter of [NWSA](org)
+    - where is [Evelyn Torton Beck](org)
+    - where is headquarter of [Evelyn Torton Beck](org)
+    - where is head quarter of [Evelyn Torton Beck](org)
+    - location of [Evelyn Torton Beck](org)
+    - headquarter of [Evelyn Torton Beck](org)
+    - head quarter of [Evelyn Torton Beck](org)
+    - where is [National Lesbian Feminist Organization](org)
+    - where is headquarter of [National Lesbian Feminist Organization](org)
+    - where is head quarter of [National Lesbian Feminist Organization](org)
+    - location of [National Lesbian Feminist Organization](org)
+    - headquarter of [National Lesbian Feminist Organization](org)
+    - head quarter of [National Lesbian Feminist Organization](org)
+    - where is [NLFO](org)
+    - where is headquarter of [NLFO](org)
+    - where is head quarter of [NLFO](org)
+    - location of [NLFO](org)
+    - headquarter of [NLFO](org)
+    - head quarter of [NLFO](org)
+    - where is [National Women’s Studies Association](org)
+    - where is headquarter of [National Women’s Studies Association](org)
+    - where is head quarter of [National Women’s Studies Association](org)
+    - location of [National Women’s Studies Association](org)
+    - headquarter of [National Women’s Studies Association](org)
+    - head quarter of [National Women’s Studies Association](org)
+    - where is [Pearl Harbor Entertainment](org)
+    - where is headquarter of [Pearl Harbor Entertainment](org)
+    - where is head quarter of [Pearl Harbor Entertainment](org)
+    - location of [Pearl Harbor Entertainment](org)
+    - headquarter of [Pearl Harbor Entertainment](org)
+    - head quarter of [Pearl Harbor Entertainment](org)
+    - where is [El Alami Group](org)
+    - where is headquarter of [El Alami Group](org)
+    - where is head quarter of [El Alami Group](org)
+    - location of [El Alami Group](org)
+    - headquarter of [El Alami Group](org)
+    - head quarter of [El Alami Group](org)
+    - where is [Champions Soccer Radio Network](org)
+    - where is headquarter of [Champions Soccer Radio Network](org)
+    - where is head quarter of [Champions Soccer Radio Network](org)
+    - location of [Champions Soccer Radio Network](org)
+    - headquarter of [Champions Soccer Radio Network](org)
+    - head quarter of [Champions Soccer Radio Network](org)
+    - where is [CSRN](org)
+    - where is headquarter of [CSRN](org)
+    - where is head quarter of [CSRN](org)
+    - location of [CSRN](org)
+    - headquarter of [CSRN](org)
+    - head quarter of [CSRN](org)
+    - where is [Worldwide Aeros Corp](org)
+    - where is headquarter of [Worldwide Aeros Corp](org)
+    - where is head quarter of [Worldwide Aeros Corp](org)
+    - location of [Worldwide Aeros Corp](org)
+    - headquarter of [Worldwide Aeros Corp](org)
+    - head quarter of [Worldwide Aeros Corp](org)
+    - where is [Viessmann Group](org)
+    - where is headquarter of [Viessmann Group](org)
+    - where is head quarter of [Viessmann Group](org)
+    - location of [Viessmann Group](org)
+    - headquarter of [Viessmann Group](org)
+    - head quarter of [Viessmann Group](org)
+    - where is [Falcon International Bank](org)
+    - where is headquarter of [Falcon International Bank](org)
+    - where is head quarter of [Falcon International Bank](org)
+    - location of [Falcon International Bank](org)
+    - headquarter of [Falcon International Bank](org)
+    - head quarter of [Falcon International Bank](org)
+    - where is [Liverpool Football Club](org)
+    - where is headquarter of [Liverpool Football Club](org)
+    - where is head quarter of [Liverpool Football Club](org)
+    - location of [Liverpool Football Club](org)
+    - headquarter of [Liverpool Football Club](org)
+    - head quarter of [Liverpool Football Club](org)
+    - where is [Island Records](org)
+    - where is headquarter of [Island Records](org)
+    - where is head quarter of [Island Records](org)
+    - location of [Island Records](org)
+    - headquarter of [Island Records](org)
+    - head quarter of [Island Records](org)
+    - where is [YSC](org)
+    - where is headquarter of [YSC](org)
+    - where is head quarter of [YSC](org)
+    - location of [YSC](org)
+    - headquarter of [YSC](org)
+    - head quarter of [YSC](org)
+    - where is [Young Survival Coalition](org)
+    - where is headquarter of [Young Survival Coalition](org)
+    - where is head quarter of [Young Survival Coalition](org)
+    - location of [Young Survival Coalition](org)
+    - headquarter of [Young Survival Coalition](org)
+    - head quarter of [Young Survival Coalition](org)
+    - where is [Citrus Studios](org)
+    - where is headquarter of [Citrus Studios](org)
+    - where is head quarter of [Citrus Studios](org)
+    - location of [Citrus Studios](org)
+    - headquarter of [Citrus Studios](org)
+    - head quarter of [Citrus Studios](org)
+    - where is [The Waxing Company](org)
+    - where is headquarter of [The Waxing Company](org)
+    - where is head quarter of [The Waxing Company](org)
+    - location of [The Waxing Company](org)
+    - headquarter of [The Waxing Company](org)
+    - head quarter of [The Waxing Company](org)
+    - where is [Tesco](org)
+    - where is headquarter of [Tesco](org)
+    - where is head quarter of [Tesco](org)
+    - location of [Tesco](org)
+    - headquarter of [Tesco](org)
+    - head quarter of [Tesco](org)
+    - where is [Morrisons](org)
+    - where is headquarter of [Morrisons](org)
+    - where is head quarter of [Morrisons](org)
+    - location of [Morrisons](org)
+    - headquarter of [Morrisons](org)
+    - head quarter of [Morrisons](org)
+    - where is [Waitrose](org)
+    - where is headquarter of [Waitrose](org)
+    - where is head quarter of [Waitrose](org)
+    - location of [Waitrose](org)
+    - headquarter of [Waitrose](org)
+    - head quarter of [Waitrose](org)
+    - where is [Superdrug](org)
+    - where is headquarter of [Superdrug](org)
+    - where is head quarter of [Superdrug](org)
+    - location of [Superdrug](org)
+    - headquarter of [Superdrug](org)
+    - head quarter of [Superdrug](org)
+    - where is [Sainsbury's](org)
+    - where is headquarter of [Sainsbury's](org)
+    - where is head quarter of [Sainsbury's](org)
+    - location of [Sainsbury's](org)
+    - headquarter of [Sainsbury's](org)
+    - head quarter of [Sainsbury's](org)
+    - where is [Asda](org)
+    - where is headquarter of [Asda](org)
+    - where is head quarter of [Asda](org)
+    - location of [Asda](org)
+    - headquarter of [Asda](org)
+    - head quarter of [Asda](org)
+    - where is [PJ Smoothies](org)
+    - where is headquarter of [PJ Smoothies](org)
+    - where is head quarter of [PJ Smoothies](org)
+    - location of [PJ Smoothies](org)
+    - headquarter of [PJ Smoothies](org)
+    - head quarter of [PJ Smoothies](org)
+    - where is [Bill & Melinda Gates Foundation](org)
+    - where is headquarter of [Bill & Melinda Gates Foundation](org)
+    - where is head quarter of [Bill & Melinda Gates Foundation](org)
+    - location of [Bill & Melinda Gates Foundation](org)
+    - headquarter of [Bill & Melinda Gates Foundation](org)
+    - head quarter of [Bill & Melinda Gates Foundation](org)
+    - where is [Gates Foundation](org)
+    - where is headquarter of [Gates Foundation](org)
+    - where is head quarter of [Gates Foundation](org)
+    - location of [Gates Foundation](org)
+    - headquarter of [Gates Foundation](org)
+    - head quarter of [Gates Foundation](org)
+    - where is [BMGF](org)
+    - where is headquarter of [BMGF](org)
+    - where is head quarter of [BMGF](org)
+    - location of [BMGF](org)
+    - headquarter of [BMGF](org)
+    - head quarter of [BMGF](org)
+    - where is [PHLPost](org)
+    - where is headquarter of [PHLPost](org)
+    - where is head quarter of [PHLPost](org)
+    - location of [PHLPost](org)
+    - headquarter of [PHLPost](org)
+    - head quarter of [PHLPost](org)
+    - where is [National Soccer Hall of Fame](org)
+    - where is headquarter of [National Soccer Hall of Fame](org)
+    - where is head quarter of [National Soccer Hall of Fame](org)
+    - location of [National Soccer Hall of Fame](org)
+    - headquarter of [National Soccer Hall of Fame](org)
+    - head quarter of [National Soccer Hall of Fame](org)
+    - where is [National Electoral Commission](org)
+    - where is headquarter of [National Electoral Commission](org)
+    - where is head quarter of [National Electoral Commission](org)
+    - location of [National Electoral Commission](org)
+    - headquarter of [National Electoral Commission](org)
+    - head quarter of [National Electoral Commission](org)
+
+- intent: subsidiary
+  examples: |
+    - subsidiary of [New Generations Technology](org)
+    - who is subsidiary of [New Generations Technology](org)
+    - subsidiary of [IPG](org)
+    - who is subsidiary of [IPG](org)
+    - subsidiary of [National Association of Corporate Directors](org)
+    - who is subsidiary of [National Association of Corporate Directors](org)
+    - subsidiary of [VEBA](org)
+    - who is subsidiary of [VEBA](org)
+    - subsidiary of [Thor Industries](org)
+    - who is subsidiary of [Thor Industries](org)
+    - subsidiary of [Nippon Express Company Ltd.](org)
+    - who is subsidiary of [Nippon Express Company Ltd.](org)
+    - subsidiary of [Raymond James Financial](org)
+    - who is subsidiary of [Raymond James Financial](org)
+    - subsidiary of [SpArc Philadelphia](org)
+    - who is subsidiary of [SpArc Philadelphia](org)
+    - subsidiary of [FROMM Holdings](org)
+    - who is subsidiary of [FROMM Holdings](org)
+    - subsidiary of [Eni](org)
+    - who is subsidiary of [Eni](org)
+    - subsidiary of [Jarden Corporation](org)
+    - who is subsidiary of [Jarden Corporation](org)
+    - subsidiary of [Sun Online Solutions](org)
+    - who is subsidiary of [Sun Online Solutions](org)
+    - subsidiary of [UPS](org)
+    - who is subsidiary of [UPS](org)
+    - subsidiary of [BCE](org)
+    - who is subsidiary of [BCE](org)
+    - subsidiary of [UniGroup](org)
+    - who is subsidiary of [UniGroup](org)
+    - subsidiary of [Telkom Kenya](org)
+    - who is subsidiary of [Telkom Kenya](org)
+    - subsidiary of [NJOP](org)
+    - who is subsidiary of [NJOP](org)
+    - subsidiary of [CC&N](org)
+    - who is subsidiary of [CC&N](org)
+    - subsidiary of [RKN](org)
+    - who is subsidiary of [RKN](org)
+    - subsidiary of [Redknee Solutions Inc.](org)
+    - who is subsidiary of [Redknee Solutions Inc.](org)
+    - subsidiary of [FishPalâ](org)
+    - who is subsidiary of [FishPalâ](org)
+    - subsidiary of [America's InfoMart, Inc](org)
+    - who is subsidiary of [America's InfoMart, Inc](org)
+
+- intent: parent
+  examples: |
+    - parent organization of [Peters Avae](org)
+    - parent company of [Peters Avae](org)
+    - [Peters Avae](org) foundef from
+    - [Peters Avae](org) founded from which company
+    - parent organization of [NGTechBlog](org)
+    - parent company of [NGTechBlog](org)
+    - [NGTechBlog](org) foundef from
+    - [NGTechBlog](org) founded from which company
+    - parent organization of [IPG](org)
+    - parent company of [IPG](org)
+    - [IPG](org) foundef from
+    - [IPG](org) founded from which company
+    - parent organization of [Hospitality Performance Group](org)
+    - parent company of [Hospitality Performance Group](org)
+    - [Hospitality Performance Group](org) foundef from
+    - [Hospitality Performance Group](org) founded from which company
+    - parent organization of [HPG](org)
+    - parent company of [HPG](org)
+    - [HPG](org) foundef from
+    - [HPG](org) founded from which company
+    - parent organization of [NACD North Texas](org)
+    - parent company of [NACD North Texas](org)
+    - [NACD North Texas](org) foundef from
+    - [NACD North Texas](org) founded from which company
+    - parent organization of [PreussenElektra](org)
+    - parent company of [PreussenElektra](org)
+    - [PreussenElektra](org) foundef from
+    - [PreussenElektra](org) founded from which company
+    - parent organization of [Airstream](org)
+    - parent company of [Airstream](org)
+    - [Airstream](org) foundef from
+    - [Airstream](org) founded from which company
+    - parent organization of [Nippon Express USA, INC](org)
+    - parent company of [Nippon Express USA, INC](org)
+    - [Nippon Express USA, INC](org) foundef from
+    - [Nippon Express USA, INC](org) founded from which company
+    - parent organization of [Raymond James Bank](org)
+    - parent company of [Raymond James Bank](org)
+    - [Raymond James Bank](org) foundef from
+    - [Raymond James Bank](org) founded from which company
+    - parent organization of [Arc of Philadelphia](org)
+    - parent company of [Arc of Philadelphia](org)
+    - [Arc of Philadelphia](org) foundef from
+    - [Arc of Philadelphia](org) founded from which company
+    - parent organization of [SpArc Services](org)
+    - parent company of [SpArc Services](org)
+    - [SpArc Services](org) foundef from
+    - [SpArc Services](org) founded from which company
+    - parent organization of [FROMM Packaging Ltd](org)
+    - parent company of [FROMM Packaging Ltd](org)
+    - [FROMM Packaging Ltd](org) foundef from
+    - [FROMM Packaging Ltd](org) founded from which company
+    - parent organization of [Refining and Marketing Division](org)
+    - parent company of [Refining and Marketing Division](org)
+    - [Refining and Marketing Division](org) foundef from
+    - [Refining and Marketing Division](org) founded from which company
+    - parent organization of [Agip](org)
+    - parent company of [Agip](org)
+    - [Agip](org) foundef from
+    - [Agip](org) founded from which company
+    - parent organization of [R&M](org)
+    - parent company of [R&M](org)
+    - [R&M](org) foundef from
+    - [R&M](org) founded from which company
+    - parent organization of [Quickie Manufacturing Corporation](org)
+    - parent company of [Quickie Manufacturing Corporation](org)
+    - [Quickie Manufacturing Corporation](org) foundef from
+    - [Quickie Manufacturing Corporation](org) founded from which company
+    - parent organization of [Odyssey Golf](org)
+    - parent company of [Odyssey Golf](org)
+    - [Odyssey Golf](org) foundef from
+    - [Odyssey Golf](org) founded from which company
+    - parent organization of [Sun Online Solutions](org)
+    - parent company of [Sun Online Solutions](org)
+    - [Sun Online Solutions](org) foundef from
+    - [Sun Online Solutions](org) founded from which company
+    - parent organization of [Sun Online Solutions Pvt. Ltd.](org)
+    - parent company of [Sun Online Solutions Pvt. Ltd.](org)
+    - [Sun Online Solutions Pvt. Ltd.](org) foundef from
+    - [Sun Online Solutions Pvt. Ltd.](org) founded from which company
+    - parent organization of [Coyote](org)
+    - parent company of [Coyote](org)
+    - [Coyote](org) foundef from
+    - [Coyote](org) founded from which company
+    - parent organization of [BCE](org)
+    - parent company of [BCE](org)
+    - [BCE](org) foundef from
+    - [BCE](org) founded from which company
+    - parent organization of [Bce Inc.](org)
+    - parent company of [Bce Inc.](org)
+    - [Bce Inc.](org) foundef from
+    - [Bce Inc.](org) founded from which company
+    - parent organization of [Northern Telecom](org)
+    - parent company of [Northern Telecom](org)
+    - [Northern Telecom](org) foundef from
+    - [Northern Telecom](org) founded from which company
+    - parent organization of [Bell Canada](org)
+    - parent company of [Bell Canada](org)
+    - [Bell Canada](org) foundef from
+    - [Bell Canada](org) founded from which company
+    - parent organization of [Allegiant Move Management](org)
+    - parent company of [Allegiant Move Management](org)
+    - [Allegiant Move Management](org) foundef from
+    - [Allegiant Move Management](org) founded from which company
+    - parent organization of [Mayflower Transit](org)
+    - parent company of [Mayflower Transit](org)
+    - [Mayflower Transit](org) foundef from
+    - [Mayflower Transit](org) founded from which company
+    - parent organization of [United Van Lines](org)
+    - parent company of [United Van Lines](org)
+    - [United Van Lines](org) foundef from
+    - [United Van Lines](org) founded from which company
+    - parent organization of [UniGroup Relocation](org)
+    - parent company of [UniGroup Relocation](org)
+    - [UniGroup Relocation](org) foundef from
+    - [UniGroup Relocation](org) founded from which company
+    - parent organization of [Trans Advantage](org)
+    - parent company of [Trans Advantage](org)
+    - [Trans Advantage](org) foundef from
+    - [Trans Advantage](org) founded from which company
+    - parent organization of [UniGroup Logistics](org)
+    - parent company of [UniGroup Logistics](org)
+    - [UniGroup Logistics](org) foundef from
+    - [UniGroup Logistics](org) founded from which company
+    - parent organization of [Unigroup, Inc.](org)
+    - parent company of [Unigroup, Inc.](org)
+    - [Unigroup, Inc.](org) foundef from
+    - [Unigroup, Inc.](org) founded from which company
+    - parent organization of [Safaricom](org)
+    - parent company of [Safaricom](org)
+    - [Safaricom](org) foundef from
+    - [Safaricom](org) founded from which company
+    - parent organization of [NJOP](org)
+    - parent company of [NJOP](org)
+    - [NJOP](org) foundef from
+    - [NJOP](org) founded from which company
+    - parent organization of [JSOP](org)
+    - parent company of [JSOP](org)
+    - [JSOP](org) foundef from
+    - [JSOP](org) founded from which company
+    - parent organization of [Jiangsu Jinling Opta Polymer Co.,Ltd](org)
+    - parent company of [Jiangsu Jinling Opta Polymer Co.,Ltd](org)
+    - [Jiangsu Jinling Opta Polymer Co.,Ltd](org) foundef from
+    - [Jiangsu Jinling Opta Polymer Co.,Ltd](org) founded from which company
+    - parent organization of [Nanjing Jinling Opta Polymer Co.,ltd.](org)
+    - parent company of [Nanjing Jinling Opta Polymer Co.,ltd.](org)
+    - [Nanjing Jinling Opta Polymer Co.,ltd.](org) foundef from
+    - [Nanjing Jinling Opta Polymer Co.,ltd.](org) founded from which company
+    - parent organization of [CC&N](org)
+    - parent company of [CC&N](org)
+    - [CC&N](org) foundef from
+    - [CC&N](org) founded from which company
+    - parent organization of [NEXT Electric Inc.](org)
+    - parent company of [NEXT Electric Inc.](org)
+    - [NEXT Electric Inc.](org) foundef from
+    - [NEXT Electric Inc.](org) founded from which company
+    - parent organization of [Redknee](org)
+    - parent company of [Redknee](org)
+    - [Redknee](org) foundef from
+    - [Redknee](org) founded from which company
+    - parent organization of [Redknee Solutions Inc.](org)
+    - parent company of [Redknee Solutions Inc.](org)
+    - [Redknee Solutions Inc.](org) foundef from
+    - [Redknee Solutions Inc.](org) founded from which company
+    - parent organization of [Redknee Inc.](org)
+    - parent company of [Redknee Inc.](org)
+    - [Redknee Inc.](org) foundef from
+    - [Redknee Inc.](org) founded from which company
+    - parent organization of [RKN](org)
+    - parent company of [RKN](org)
+    - [RKN](org) foundef from
+    - [RKN](org) founded from which company
+    - parent organization of [Atholl Sporting](org)
+    - parent company of [Atholl Sporting](org)
+    - [Atholl Sporting](org) foundef from
+    - [Atholl Sporting](org) founded from which company
+    - parent organization of [FishPal](org)
+    - parent company of [FishPal](org)
+    - [FishPal](org) foundef from
+    - [FishPal](org) founded from which company
+    - parent organization of [FishPal Ltd](org)
+    - parent company of [FishPal Ltd](org)
+    - [FishPal Ltd](org) foundef from
+    - [FishPal Ltd](org) founded from which company
+    - parent organization of [Tweed Salmon Fishings](org)
+    - parent company of [Tweed Salmon Fishings](org)
+    - [Tweed Salmon Fishings](org) foundef from
+    - [Tweed Salmon Fishings](org) founded from which company
+    - parent organization of [AIM Your Way](org)
+    - parent company of [AIM Your Way](org)
+    - [AIM Your Way](org) foundef from
+    - [AIM Your Way](org) founded from which company
+    - parent organization of [AIM](org)
+    - parent company of [AIM](org)
+    - [AIM](org) foundef from
+    - [AIM](org) founded from which company
+    - parent organization of [AIM Your Way, LLC](org)
+    - parent company of [AIM Your Way, LLC](org)
+    - [AIM Your Way, LLC](org) foundef from
+    - [AIM Your Way, LLC](org) founded from which company
+  
+- intent: founder_in
+  examples: |
+    - when [Société Botanique de France](org) Founded
+    - [Société Botanique de France](org) founded in
+    - [Société Botanique de France](org) founded in which year
+    - when [Wladimir de Schoenefeld](org) Founded
+    - [Wladimir de Schoenefeld](org) founded in
+    - [Wladimir de Schoenefeld](org) founded in which year
+    - when [IPG](org) Founded
+    - [IPG](org) founded in
+    - [IPG](org) founded in which year
+    - when [Hospitality Performance Group](org) Founded
+    - [Hospitality Performance Group](org) founded in
+    - [Hospitality Performance Group](org) founded in which year
+    - when [HPG](org) Founded
+    - [HPG](org) founded in
+    - [HPG](org) founded in which year
+    - when [Neuroblastoma UK](org) Founded
+    - [Neuroblastoma UK](org) founded in
+    - [Neuroblastoma UK](org) founded in which year
+    - when [Society](org) Founded
+    - [Society](org) founded in
+    - [Society](org) founded in which year
+    - when [PreussenElektra](org) Founded
+    - [PreussenElektra](org) founded in
+    - [PreussenElektra](org) founded in which year
+    - when [Veooz](org) Founded
+    - [Veooz](org) founded in
+    - [Veooz](org) founded in which year
+    - when [Nippon Express USA, INC](org) Founded
+    - [Nippon Express USA, INC](org) founded in
+    - [Nippon Express USA, INC](org) founded in which year
+    - when [Beans & Brews Coffee House](org) Founded
+    - [Beans & Brews Coffee House](org) founded in
+    - [Beans & Brews Coffee House](org) founded in which year
+    - when [Redwood Skytours Travel Agency](org) Founded
+    - [Redwood Skytours Travel Agency](org) founded in
+    - [Redwood Skytours Travel Agency](org) founded in which year
+    - when [Redwood Travel](org) Founded
+    - [Redwood Travel](org) founded in
+    - [Redwood Travel](org) founded in which year
+    - when [Scunthorpe Saints](org) Founded
+    - [Scunthorpe Saints](org) founded in
+    - [Scunthorpe Saints](org) founded in which year
+    - when [Building and Housing Office](org) Founded
+    - [Building and Housing Office](org) founded in
+    - [Building and Housing Office](org) founded in which year
+    - when [LOT Polish Airlines](org) Founded
+    - [LOT Polish Airlines](org) founded in
+    - [LOT Polish Airlines](org) founded in which year
+    - when [Central Glass Company](org) Founded
+    - [Central Glass Company](org) founded in
+    - [Central Glass Company](org) founded in which year
+    - when [Central Glass](org) Founded
+    - [Central Glass](org) founded in
+    - [Central Glass](org) founded in which year
+    - when [Melbourne Football Club](org) Founded
+    - [Melbourne Football Club](org) founded in
+    - [Melbourne Football Club](org) founded in which year
+    - when [Ashinaga (organization)](org) Founded
+    - [Ashinaga (organization)](org) founded in
+    - [Ashinaga (organization)](org) founded in which year
+    - when [Ashinaga](org) Founded
+    - [Ashinaga](org) founded in
+    - [Ashinaga](org) founded in which year
+    - when [あしなが育英会](org) Founded
+    - [あしなが育英会](org) founded in
+    - [あしなが育英会](org) founded in which year
+    - when [Ashinaga Ikueikai](org) Founded
+    - [Ashinaga Ikueikai](org) founded in
+    - [Ashinaga Ikueikai](org) founded in which year
+    - when [Government Communications Headquarters](org) Founded
+    - [Government Communications Headquarters](org) founded in
+    - [Government Communications Headquarters](org) founded in which year
+    - when [ACS](org) Founded
+    - [ACS](org) founded in
+    - [ACS](org) founded in which year
+    - when [AUTOMATED CONVEYOR SYSTEMS, INC.](org) Founded
+    - [AUTOMATED CONVEYOR SYSTEMS, INC.](org) founded in
+    - [AUTOMATED CONVEYOR SYSTEMS, INC.](org) founded in which year
+    - when [Free Software Foundation](org) Founded
+    - [Free Software Foundation](org) founded in
+    - [Free Software Foundation](org) founded in which year
+    - when [FSF](org) Founded
+    - [FSF](org) founded in
+    - [FSF](org) founded in which year
+    - when [American Hardware Manufacturers Association](org) Founded
+    - [American Hardware Manufacturers Association](org) founded in
+    - [American Hardware Manufacturers Association](org) founded in which year
+    - when [AHMA](org) Founded
+    - [AHMA](org) founded in
+    - [AHMA](org) founded in which year
+    - when [Arc of Philadelphia](org) Founded
+    - [Arc of Philadelphia](org) founded in
+    - [Arc of Philadelphia](org) founded in which year
+    - when [SpArc Services](org) Founded
+    - [SpArc Services](org) founded in
+    - [SpArc Services](org) founded in which year
+    - when [National Transitional Council](org) Founded
+    - [National Transitional Council](org) founded in
+    - [National Transitional Council](org) founded in which year
+    - when [Foundation Medicine](org) Founded
+    - [Foundation Medicine](org) founded in
+    - [Foundation Medicine](org) founded in which year
+    - when [Foundation Medicine, Inc.](org) Founded
+    - [Foundation Medicine, Inc.](org) founded in
+    - [Foundation Medicine, Inc.](org) founded in which year
+    - when [David Ashford](org) Founded
+    - [David Ashford](org) founded in
+    - [David Ashford](org) founded in which year
+    - when [Society for Gas as a Marine Fuel](org) Founded
+    - [Society for Gas as a Marine Fuel](org) founded in
+    - [Society for Gas as a Marine Fuel](org) founded in which year
+    - when [SGMF](org) Founded
+    - [SGMF](org) founded in
+    - [SGMF](org) founded in which year
+    - when [Japanese American National Museum](org) Founded
+    - [Japanese American National Museum](org) founded in
+    - [Japanese American National Museum](org) founded in which year
+    - when [Irene Hirano](org) Founded
+    - [Irene Hirano](org) founded in
+    - [Irene Hirano](org) founded in which year
+    - when [U.S.-Japan Council](org) Founded
+    - [U.S.-Japan Council](org) founded in
+    - [U.S.-Japan Council](org) founded in which year
+    - when [Irwin L. Jacobs](org) Founded
+    - [Irwin L. Jacobs](org) founded in
+    - [Irwin L. Jacobs](org) founded in which year
+    - when [CVN](org) Founded
+    - [CVN](org) founded in
+    - [CVN](org) founded in which year
+    - when [Genmar Holdings](org) Founded
+    - [Genmar Holdings](org) founded in
+    - [Genmar Holdings](org) founded in which year
+    - when [COMB](org) Founded
+    - [COMB](org) founded in
+    - [COMB](org) founded in which year
+    - when [Close-out Merchandise Buyers](org) Founded
+    - [Close-out Merchandise Buyers](org) founded in
+    - [Close-out Merchandise Buyers](org) founded in which year
+    - when [Cable Value Network](org) Founded
+    - [Cable Value Network](org) founded in
+    - [Cable Value Network](org) founded in which year
+    - when [River City Contractors](org) Founded
+    - [River City Contractors](org) founded in
+    - [River City Contractors](org) founded in which year
+    - when [River City Contractors, Inc.](org) Founded
+    - [River City Contractors, Inc.](org) founded in
+    - [River City Contractors, Inc.](org) founded in which year
+    - when [FROMM Packaging Ltd](org) Founded
+    - [FROMM Packaging Ltd](org) founded in
+    - [FROMM Packaging Ltd](org) founded in which year
+    - when [Institute of International Relations (Turkmenistan)](org) Founded
+    - [Institute of International Relations (Turkmenistan)](org) founded in
+    - [Institute of International Relations (Turkmenistan)](org) founded in which year
+    - when [Trish Lake](org) Founded
+    - [Trish Lake](org) founded in
+    - [Trish Lake](org) founded in which year
+    - when [Freshwater Pictures](org) Founded
+    - [Freshwater Pictures](org) founded in
+    - [Freshwater Pictures](org) founded in which year
+    - when [Allstate Insurance: Tim Hacker](org) Founded
+    - [Allstate Insurance: Tim Hacker](org) founded in
+    - [Allstate Insurance: Tim Hacker](org) founded in which year
+    - when [ATA](org) Founded
+    - [ATA](org) founded in
+    - [ATA](org) founded in which year
+    - when [American Trucking Associations](org) Founded
+    - [American Trucking Associations](org) founded in
+    - [American Trucking Associations](org) founded in which year
+    - when [Hillsboro Parent Preschool + Kindergarten](org) Founded
+    - [Hillsboro Parent Preschool + Kindergarten](org) founded in
+    - [Hillsboro Parent Preschool + Kindergarten](org) founded in which year
+    - when [Chittenden & Eastman Company](org) Founded
+    - [Chittenden & Eastman Company](org) founded in
+    - [Chittenden & Eastman Company](org) founded in which year
+    - when [Refining and Marketing Division](org) Founded
+    - [Refining and Marketing Division](org) founded in
+    - [Refining and Marketing Division](org) founded in which year
+    - when [Agip](org) Founded
+    - [Agip](org) founded in
+    - [Agip](org) founded in which year
+    - when [R&M](org) Founded
+    - [R&M](org) founded in
+    - [R&M](org) founded in which year
+    - when [The European Courier](org) Founded
+    - [The European Courier](org) founded in
+    - [The European Courier](org) founded in which year
+    - when [European Courier](org) Founded
+    - [European Courier](org) founded in
+    - [European Courier](org) founded in which year
+    - when [All Blacks](org) Founded
+    - [All Blacks](org) founded in
+    - [All Blacks](org) founded in which year
+    - when [Manawatu Evening Standard](org) Founded
+    - [Manawatu Evening Standard](org) founded in
+    - [Manawatu Evening Standard](org) founded in which year
+    - when [One Percent](org) Founded
+    - [One Percent](org) founded in
+    - [One Percent](org) founded in which year
+    - when [Lynyrd Skynyrd](org) Founded
+    - [Lynyrd Skynyrd](org) founded in
+    - [Lynyrd Skynyrd](org) founded in which year
+    - when [My Backyard](org) Founded
+    - [My Backyard](org) founded in
+    - [My Backyard](org) founded in which year
+    - when [Noble Five](org) Founded
+    - [Noble Five](org) founded in
+    - [Noble Five](org) founded in which year
+    - when [Association of Consultants](org) Founded
+    - [Association of Consultants](org) founded in
+    - [Association of Consultants](org) founded in which year
+    - when [Statistical Bureau'](org) Founded
+    - [Statistical Bureau'](org) founded in
+    - [Statistical Bureau'](org) founded in which year
+    - when [itself](org) Founded
+    - [itself](org) founded in
+    - [itself](org) founded in which year
+    - when [Statistik Austria](org) Founded
+    - [Statistik Austria](org) founded in
+    - [Statistik Austria](org) founded in which year
+    - when [Forest Bluff School](org) Founded
+    - [Forest Bluff School](org) founded in
+    - [Forest Bluff School](org) founded in which year
+    - when [Compaq Computer Corporation](org) Founded
+    - [Compaq Computer Corporation](org) founded in
+    - [Compaq Computer Corporation](org) founded in which year
+    - when [Compaq](org) Founded
+    - [Compaq](org) founded in
+    - [Compaq](org) founded in which year
+    - when [BCE](org) Founded
+    - [BCE](org) founded in
+    - [BCE](org) founded in which year
+    - when [Bce Inc.](org) Founded
+    - [Bce Inc.](org) founded in
+    - [Bce Inc.](org) founded in which year
+    - when [Northern Telecom](org) Founded
+    - [Northern Telecom](org) founded in
+    - [Northern Telecom](org) founded in which year
+    - when [Bell Canada](org) Founded
+    - [Bell Canada](org) founded in
+    - [Bell Canada](org) founded in which year
+    - when [United States Secretary of the Navy](org) Founded
+    - [United States Secretary of the Navy](org) founded in
+    - [United States Secretary of the Navy](org) founded in which year
+    - when [Versare Car Company](org) Founded
+    - [Versare Car Company](org) founded in
+    - [Versare Car Company](org) founded in which year
+    - when [Lockheed Martin](org) Founded
+    - [Lockheed Martin](org) founded in
+    - [Lockheed Martin](org) founded in which year
+    - when [United Nations Children's Fund](org) Founded
+    - [United Nations Children's Fund](org) founded in
+    - [United Nations Children's Fund](org) founded in which year
+    - when [UNICEF](org) Founded
+    - [UNICEF](org) founded in
+    - [UNICEF](org) founded in which year
+    - when [Agricultural School](org) Founded
+    - [Agricultural School](org) founded in
+    - [Agricultural School](org) founded in which year
+    - when [Red Priest](org) Founded
+    - [Red Priest](org) founded in
+    - [Red Priest](org) founded in which year
+    - when [O’Sullivan Brothers, Inc.](org) Founded
+    - [O’Sullivan Brothers, Inc.](org) founded in
+    - [O’Sullivan Brothers, Inc.](org) founded in which year
+    - when [University of Kiel](org) Founded
+    - [University of Kiel](org) founded in
+    - [University of Kiel](org) founded in which year
+    - when [NJOP](org) Founded
+    - [NJOP](org) founded in
+    - [NJOP](org) founded in which year
+    - when [JSOP](org) Founded
+    - [JSOP](org) founded in
+    - [JSOP](org) founded in which year
+    - when [Jiangsu Jinling Opta Polymer Co.,Ltd](org) Founded
+    - [Jiangsu Jinling Opta Polymer Co.,Ltd](org) founded in
+    - [Jiangsu Jinling Opta Polymer Co.,Ltd](org) founded in which year
+    - when [Nanjing Jinling Opta Polymer Co.,ltd.](org) Founded
+    - [Nanjing Jinling Opta Polymer Co.,ltd.](org) founded in
+    - [Nanjing Jinling Opta Polymer Co.,ltd.](org) founded in which year
+    - when [Worldwide Aeros Corp](org) Founded
+    - [Worldwide Aeros Corp](org) founded in
+    - [Worldwide Aeros Corp](org) founded in which year
+    - when [Citizens United for Research in Epilepsy](org) Founded
+    - [Citizens United for Research in Epilepsy](org) founded in
+    - [Citizens United for Research in Epilepsy](org) founded in which year
+    - when [Liverpool Football Club](org) Founded
+    - [Liverpool Football Club](org) founded in
+    - [Liverpool Football Club](org) founded in which year
+    - when [Island Records](org) Founded
+    - [Island Records](org) founded in
+    - [Island Records](org) founded in which year
+    - when [Redknee](org) Founded
+    - [Redknee](org) founded in
+    - [Redknee](org) founded in which year
+    - when [Redknee Solutions Inc.](org) Founded
+    - [Redknee Solutions Inc.](org) founded in
+    - [Redknee Solutions Inc.](org) founded in which year
+    - when [Redknee Inc.](org) Founded
+    - [Redknee Inc.](org) founded in
+    - [Redknee Inc.](org) founded in which year
+    - when [RKN](org) Founded
+    - [RKN](org) founded in
+    - [RKN](org) founded in which year
+    - when [YSC](org) Founded
+    - [YSC](org) founded in
+    - [YSC](org) founded in which year
+    - when [Young Survival Coalition](org) Founded
+    - [Young Survival Coalition](org) founded in
+    - [Young Survival Coalition](org) founded in which year
+    - when [Bill & Melinda Gates Foundation](org) Founded
+    - [Bill & Melinda Gates Foundation](org) founded in
+    - [Bill & Melinda Gates Foundation](org) founded in which year
+    - when [Gates Foundation](org) Founded
+    - [Gates Foundation](org) founded in
+    - [Gates Foundation](org) founded in which year
+    - when [BMGF](org) Founded
+    - [BMGF](org) founded in
+    - [BMGF](org) founded in which year
+    - when [National Soccer Hall of Fame](org) Founded
+    - [National Soccer Hall of Fame](org) founded in
+    - [National Soccer Hall of Fame](org) founded in which year
+    - when [National Electoral Commission](org) Founded
+    - [National Electoral Commission](org) founded in
+    - [National Electoral Commission](org) founded in which year
