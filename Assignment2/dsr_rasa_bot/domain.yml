@@ -8,6 +8,11 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - query_person
+
+entities:
+  - person
+
 
 responses:
   utter_greet:
@@ -27,7 +32,24 @@ responses:
   - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am a bot, powered by Rasa [Prepared for NLU assignment by Debonil,Ravi and Saurav ]"
+  
+  desc_person/nationality:
+  - text: " {person} is {nationality} person"  
+  desc_person/resident:
+  - text: " {person} lives in {city}"  
+  desc_person/date_of_birth:
+  - text: " {person} was born on {dob}"  
+  desc_person/organization:
+  - text: " {person} works at {organization}"
+
+
+actions:
+  - utter_greet
+  - utter_happy
+  - utter_unclear
+  - action_hello_world
+  - action_desc_person
 
 session_config:
   session_expiration_time: 60
