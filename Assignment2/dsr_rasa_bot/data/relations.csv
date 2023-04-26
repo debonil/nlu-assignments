@@ -1,0 +1,16 @@
+propertyId,propertyName,propertyDescription
+1,SUBSIDIARY_OF,Describes the relationship between a parent company and one of its subsidiaries.
+10,NATIONALITY,Describes he country of a person's citizenship or country in which the person is deemed a national.
+11,PLACE_OF_RESIDENCE,Describes the relationship between a person and the location where she/he lives/lived.
+12,PLACE_OF_BIRTH,Describes the relationship between a person and the location where she/he was born.
+14,DATE_OF_DEATH,Describes the date of death of a person.
+15,DATE_OF_BIRTH,Describes the date of birth of a person.
+2,FOUNDED_BY,Describes the relationship between an organization and its founder or co-founder.
+25,SPOUSE,Describes the relationship between a person and her/his spouse.
+3,EMPLOYEE_OR_MEMBER_OF,Describes the previous/current employer of a person.
+34,CHILD_OF,Describes the relationship between a person and his/her parent.
+4,CEO,Describes the relationship between an organization and its CEO.
+45,POLITICAL_AFFILIATION,Describes the relationship between a person and her/his political affiliation.
+5,DATE_FOUNDED,Describes the founding date of a company.
+6,HEADQUARTERS,Describes the specific location where an organization's headquarters is or has been situated.
+9,EDUCATED_AT,Describes the relationship between a person and the institution where she/he studied.
