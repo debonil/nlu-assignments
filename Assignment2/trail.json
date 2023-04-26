@@ -1,0 +1,62 @@
+ [{
+        "fold": 3,
+        "source": "Diffbot Knowledge Graph",
+        "documentId": "1743",
+        "documentText": "West Covina Family Dentistry\n\nS. M. Bhatt D.D.S. Inc. Family Dentistry & Orthodontics is a clean, state-of-the-art dental offices in Victorville, San Bernardino, Hacienda Heights, West Covina, California, that specializes in dental and orthodontic care for patients of all ages. Equipped with the latest technology, we'll use the most current techniques to maintain, restore, or enhance the natural beauty of your smile and the health of your teeth.\nDr. S.M. Bhatt grew up in southern California and attended UC Irvine for his undergraduate studies. He graduated from Creighton University Dental School in Omaha, Nebraska, in 1985, and has practiced in Southern California since then. Training in implant dentistry led to his credentialing with American Academy of Implant Dentistry, or AAID, a nationally recognized association.\nDr. Bhatt spends his off time with his wife, son and daughter. His newfound interest in photography has sparked a desire to capture beautiful images, many of which are displayed in his office. Dr. Bhatt regularly attends continuing education courses to keep his dental knowledge and abilities current. He holds membership with all of the following organizations:\n* American Dental Association\n* California Dental Association\n* Indian Dental Association of California\n* American Academy of Implant Dentistry",
+        "passages": [
+            {
+                "passageId": "1743:450:549",
+                "exhaustivelyAnnotatedProperties": [
+                    {
+                        "propertyId": "12",
+                        "propertyName": "PLACE_OF_BIRTH",
+                        "propertyDescription": "Describes the relationship between a person and the location where she/he was born."
+                    },
+                    {
+                        "propertyId": "10",
+                        "propertyName": "NATIONALITY",
+                        "propertyDescription": "Describes he country of a person's citizenship or country in which the person is deemed a national."
+                    },
+                    {
+                        "propertyId": "11",
+                        "propertyName": "PLACE_OF_RESIDENCE",
+                        "propertyDescription": "Describes the relationship between a person and the location where she/he lives/lived."
+                    }
+                ],
+                "passageStart": 450,
+                "passageEnd": 549,
+                "passageText": "Dr. S.M. Bhatt grew up in southern California and attended UC Irvine for his undergraduate studies.",
+                "facts": [
+                    {
+                        "factId": "1743:454:464:485:495:11",
+                        "propertyId": "11",
+                        "humanReadable": "<S.M. Bhatt> <PLACE_OF_RESIDENCE> <California>",
+                        "annotatedPassage": "Dr. <S.M. Bhatt> grew up in southern <California> and attended UC Irvine for his undergraduate studies.",
+                        "subjectStart": 454,
+                        "subjectEnd": 464,
+                        "subjectText": "S.M. Bhatt",
+                        "subjectUri": "",
+                        "objectStart": 485,
+                        "objectEnd": 495,
+                        "objectText": "California",
+                        "objectUri": "http://www.wikidata.org/entity/Q99"
+                    },
+                    {
+                        "factId": "1743:523:526:485:495:11",
+                        "propertyId": "11",
+                        "humanReadable": "<his> <PLACE_OF_RESIDENCE> <California>",
+                        "annotatedPassage": "Dr. S.M. Bhatt grew up in southern <California> and attended UC Irvine for <his> undergraduate studies.",
+                        "subjectStart": 523,
+                        "subjectEnd": 526,
+                        "subjectText": "his",
+                        "subjectUri": "",
+                        "objectStart": 485,
+                        "objectEnd": 495,
+                        "objectText": "California",
+                        "objectUri": "http://www.wikidata.org/entity/Q99"
+                    }
+                ]
+            }
+        ]
+}
+]
