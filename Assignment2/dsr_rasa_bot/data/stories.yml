@@ -28,3 +28,9 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+  
+- story: enq person dob
+  steps:
+  - intent: query_person
+  - action: action_desc_person
