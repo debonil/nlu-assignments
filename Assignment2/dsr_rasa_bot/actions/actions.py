@@ -35,7 +35,7 @@ class ActionDescPerson(Action):
 
         if person != None:
             dispatcher.utter_message(
-                template=f"desc_person/{query}",
+                response=f"desc_person/{query}",
                 person=person,
                 nationality="Indian",
                 city="Kolkata",
@@ -45,4 +45,4 @@ class ActionDescPerson(Action):
         else:
             dispatcher.utter_message(
                 text="Sorry could not get whome you are refering.. can you refrase your query with person name? ")
-        return []
+        return [SlotSet("person", person)]
