@@ -92,7 +92,7 @@ nlu:
 
 - intent: query_person_DATE_OF_BIRTH
   examples: |
-    - What is the date of birth of [saurav]{"entity": "person"} ?
+    - What is the date of birth of [Rich Brightman]{"entity": "person"} ?
     - What is the date of birth of [debonil]{"entity": "person"} ?
     - What is the date of birth of [ravi]{"entity": "person"} ?
     - What is the date of birth of [tirthankar]{"entity": "person"} ?
@@ -105,7 +105,7 @@ nlu:
 
 - intent: query_person_PLACE_OF_RESIDENCE
   examples: |
-    - where does [saurav]{"entity": "person"} live ?
+    - where does [Heraclio]{"entity": "person"} live ?
     - where is the residence of [saurav]{"entity": "person"} ?
     - to which place does [saurav]{"entity": "person"} belong?
 

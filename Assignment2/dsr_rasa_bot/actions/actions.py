@@ -12,6 +12,8 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
+from database.database import get_subject
+
 
 print('loading actions:')
 
@@ -33,14 +35,20 @@ class ActionDescPerson(Action):
 
         print(f'intent={intent}, entity_value={person}, query={query}')
 
+        try:
+            response = get_subject(person, query)
+        except:
+            print('failed to fetch from database!')
+        print(f'response ==> {response}')
+
         if person != None:
             dispatcher.utter_message(
                 response=f"desc_person/{query}",
                 person=person,
-                nationality="Indian",
-                city="Kolkata",
-                dob="1970-01-01",
-                organization="IIT Jodhpur"
+                nationality=response,
+                city=response,
+                dob=response,
+                organization=response
             )
         else:
             dispatcher.utter_message(
