@@ -32,5 +32,40 @@ stories:
   
 - story: enq person dob
   steps:
-  - intent: query_person
+  - intent: query_person_DATE_OF_BIRTH
+  - action: action_desc_person
+
+  
+  
+- story: enq person NATIONALITY
+  steps:
+  - intent: query_person_NATIONALITY
+  - action: action_desc_person
+
+  
+  
+- story: enq person PLACE_OF_RESIDENCE
+  steps:
+  - intent: query_person_PLACE_OF_RESIDENCE
+  - action: action_desc_person
+
+  
+  
+- story: enq person EMPLOYEE_OR_MEMBER_OF
+  steps:
+  - intent: query_person_EMPLOYEE_OR_MEMBER_OF
+  - action: action_desc_person
+
+  
+  
+- story: enq person EDUCATED_AT
+  steps:
+  - intent: query_person_EDUCATED_AT
+  - action: action_desc_person
+
+  
+  
+- story: enq person PLACE_OF_BIRTH
+  steps:
+  - intent: query_person_PLACE_OF_BIRTH
   - action: action_desc_person

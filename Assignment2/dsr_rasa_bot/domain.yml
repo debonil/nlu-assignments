@@ -8,11 +8,22 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - query_person
+  - query_person_DATE_OF_BIRTH
+  - query_person_PLACE_OF_RESIDENCE
+  - query_person_PLACE_OF_BIRTH
+  - query_person_NATIONALITY
+  - query_person_EMPLOYEE_OR_MEMBER_OF
+  - query_person_EDUCATED_AT
 
 entities:
   - person
 
+slots:
+  person:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
 
 responses:
   utter_greet:
@@ -32,16 +43,20 @@ responses:
   - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa [Prepared for NLU assignment by Debonil,Ravi and Saurav ]"
+  - text: "I am a bot [Prepared for NLU assignment by Debonil,Ravi and Saurav ]"
   
-  desc_person/nationality:
+  desc_person/NATIONALITY:
   - text: " {person} is {nationality} person"  
-  desc_person/resident:
+  desc_person/PLACE_OF_RESIDENCE:
   - text: " {person} lives in {city}"  
-  desc_person/date_of_birth:
+  desc_person/DATE_OF_BIRTH:
   - text: " {person} was born on {dob}"  
-  desc_person/organization:
+  desc_person/EMPLOYEE_OR_MEMBER_OF:
   - text: " {person} works at {organization}"
+  desc_person/EDUCATED_AT:
+  - text: " {person} educated at {organization}"
+  desc_person/PLACE_OF_BIRTH:
+  - text: " {person} born at {city}"
 
 
 actions:

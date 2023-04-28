@@ -10,35 +10,10 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-import json
-from difflib import get_close_matches
-
-#f = open('data/readyData.json', "r")
-#finalData = json.loads(f.read())
-org_map = {}
-parent_org_map = {}
-org_list = []
-parent_org_list = []
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
+from rasa_sdk.events import SlotSet
 
 
-class ActionHelloWorld(Action):
-
-    def name(self) -> Text:
-        return "action_hello_world"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        dispatcher.utter_message(text="Hello World!")
-
-        return []
+print('loading actions:')
 
 
 class ActionDescPerson(Action):
@@ -49,21 +24,25 @@ class ActionDescPerson(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        print(tracker.latest_message['intent'])
-        print(tracker.latest_message['entities'])
         intent = tracker.latest_message['intent'].get('name')
-        org = 'xyz'
-        for e in tracker.latest_message['entities']:
-            org = e['value']
+        person = tracker.get_slot('person')
+        if len(tracker.latest_message['entities']) > 0:
+            person = tracker.latest_message['entities'][0]['value']
 
-        print(intent, ',ORG is :', org)
-        dispatcher.utter_message(
-            template="desc_person/date_of_birth",
-            person=org,
-            nationality="Indian",
-            city="Kolkata",
-            dob="1970-01-01"
-        )
+        query = intent[13:]
 
+        print(f'intent={intent}, entity_value={person}, query={query}')
+
+        if person != None:
+            dispatcher.utter_message(
+                template=f"desc_person/{query}",
+                person=person,
+                nationality="Indian",
+                city="Kolkata",
+                dob="1970-01-01",
+                organization="IIT Jodhpur"
+            )
+        else:
+            dispatcher.utter_message(
+                text="Sorry could not get whome you are refering.. can you refrase your query with person name? ")
         return []
