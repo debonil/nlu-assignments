@@ -92,42 +92,51 @@ nlu:
 
 - intent: query_person_DATE_OF_BIRTH
   examples: |
-    - What is the date of birth of [Rich Brightman]{"entity": "person"} ?
-    - What is the date of birth of [debonil]{"entity": "person"} ?
-    - What is the date of birth of [ravi]{"entity": "person"} ?
-    - What is the date of birth of [tirthankar]{"entity": "person"} ?
-    - What is the date of birth of [Sara]{"entity": "person"} ?
-    - What is the date of birth of [ram]{"entity": "person"} ?
-    - when was [ravi]{"entity": "person"} born ?
-    - when was [saurav]{"entity": "person"} born ?
-    - when was [debonil]{"entity": "person"} born ?
-    - when does [tirthankar]{"entity": "person"} celebrate birthday ?
+    - What is the date of birth of [Rich Brightman]{"entity": "PERSON"} ?
+    - What is the date of birth of [debonil]{"entity": "PERSON"} ?
+    - What is the date of birth of [Obafemi Lasode]{"entity": "PERSON"} ?
+    - What is the date of birth of [tirthankar]{"entity": "PERSON"} ?
+    - What is the date of birth of [Gerard Meussen]{"entity": "PERSON"} ?
+    - What is the date of birth of [Harvey Sutton]{"entity": "PERSON"} ?
+    - when was [Timothy Melville-Ross]{"entity": "PERSON"} born ?
+    - when was [saurav]{"entity": "PERSON"} born ?
+    - when was [debonil]{"entity": "PERSON"} born ?
+    - when does [tirthankar]{"entity": "PERSON"} celebrate birthday ?
 
 - intent: query_person_PLACE_OF_RESIDENCE
   examples: |
-    - where does [Heraclio]{"entity": "person"} live ?
-    - where is the residence of [saurav]{"entity": "person"} ?
-    - to which place does [saurav]{"entity": "person"} belong?
+    - where does [Heraclio]{"entity": "PERSON"} live ?
+    - where is the residence of [saurav]{"entity": "PERSON"} ?
+    - to which place does [saurav]{"entity": "PERSON"} belong?
 
 - intent: query_person_PLACE_OF_BIRTH
   examples: |
-    - What is the birthplace of [saurav]{"entity": "person"} ?
-    - where was [saurav]{"entity": "person"} born
-    - what is the native place of [saurav]{"entity": "person"}
+    - What is the birthplace of [saurav]{"entity": "PERSON"} ?
+    - where was [saurav]{"entity": "PERSON"} born
+    - what is the native place of [saurav]{"entity": "PERSON"}
 
 - intent: query_person_NATIONALITY
   examples: |
-    - what is the nationality of [saurav]{"entity": "person"} ?
-    - to which country does [saurav]{"entity": "person"} belong ?
-    - which country does [saurav]{"entity": "person"} represent ?
+    - what is the nationality of [saurav]{"entity": "PERSON"} ?
+    - to which country does [saurav]{"entity": "PERSON"} belong ?
+    - which country does [saurav]{"entity": "PERSON"} represent ?
 
 - intent: query_person_EMPLOYEE_OR_MEMBER_OF
   examples: |
-    - for which company [saurav]{"entity": "person"} works ?
-    - [saurav]{"entity": "person"} is working for which company ?
-    - who is the employer of  [saurav]{"entity": "person"} ?
+    - for which company [saurav]{"entity": "PERSON"} works ?
+    - [saurav]{"entity": "PERSON"} is working for which company ?
+    - who is the employer of  [saurav]{"entity": "PERSON"} ?
     
 - intent: query_person_EDUCATED_AT
   examples: |
-    - where did [saurav]{"entity": "person"} study ?
-    - from which institution [saurav]{"entity": "person"} graduated ?
+    - where did [saurav]{"entity": "PERSON"} study ?
+    - from which institution [saurav]{"entity": "PERSON"} graduated ?
+
+- lookup: PERSON
+  examples: |
+    - Johann Palisa
+    - Arthur Edward Ellis
+    - Obafemi Lasode
+    - Ruth Carter Stevenson
+    - Gerard Meussen
+    - Juan Orozco

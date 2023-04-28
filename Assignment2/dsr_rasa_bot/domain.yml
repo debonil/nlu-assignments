@@ -16,10 +16,10 @@ intents:
   - query_person_EDUCATED_AT
 
 entities:
-  - person
+  - PERSON
 
 slots:
-  person:
+  PERSON:
     type: text
     influence_conversation: false
     mappings:

@@ -18,7 +18,7 @@ print('loading actions:')
 
 
 def get_subject(subject_name="Heraclio", properrty_name="NATIONALITY"):
-    response = 'unknown'
+    response = None
     # Connection details
     uri = "bolt://localhost:7687"
     username = "debonil"
@@ -44,7 +44,7 @@ def get_subject(subject_name="Heraclio", properrty_name="NATIONALITY"):
         # print(type(list_values))
         # print(len(list_values))
         if len(list_values) > 0:
-            return list_values[0][0]
+            response = list_values[0][0]
         if len(list_values) == 0:
             #print("I am in if")
             docs = session.run(query2)
@@ -70,30 +70,34 @@ class ActionDescPerson(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         intent = tracker.latest_message['intent'].get('name')
-        person = tracker.get_slot('person')
+        person = tracker.get_slot('PERSON')
         if len(tracker.latest_message['entities']) > 0:
             person = tracker.latest_message['entities'][0]['value']
 
         query = intent[13:]
 
         print(f'intent={intent}, entity_value={person}, query={query}')
-
+        result = None
         try:
-            response = get_subject(person, query)
+            result = get_subject(person, query)
         except:
             print('failed to fetch from database!')
-        print(f'response ==> {response}')
+        print(f'response ==> {result}')
 
         if person != None:
-            dispatcher.utter_message(
-                response=f"desc_person/{query}",
-                person=person,
-                nationality=response,
-                city=response,
-                dob=response,
-                organization=response
-            )
+            if result != None:
+                dispatcher.utter_message(
+                    response=f"desc_person/{query}",
+                    person=person,
+                    nationality=result,
+                    city=result,
+                    dob=result,
+                    organization=result
+                )
+            else:
+                dispatcher.utter_message(
+                    text="Sorry, it is not my knowledge!")
         else:
             dispatcher.utter_message(
                 text="Sorry could not get whome you are refering.. can you refrase your query with person name? ")
-        return [SlotSet("person", person)]
+        return [SlotSet("PERSON", person)]
