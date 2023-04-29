@@ -14,6 +14,10 @@ intents:
   - query_person_NATIONALITY
   - query_person_EMPLOYEE_OR_MEMBER_OF
   - query_person_EDUCATED_AT
+  - query_person_all
+  - get_all_person_EDUCATED_AT
+  - get_all_person_PLACE_OF_RESIDENCE
+  - enquire_bot
 
 entities:
   - PERSON
@@ -33,7 +37,6 @@ responses:
   - text: "Yo, what's up? How's everything going?"
   - text: "Hi there, how are you doing today?"
   - text: "Hi!"
-  - text: "Hey! busy day for me, whats up ?"
  
 
   utter_cheer_up:
@@ -41,15 +44,14 @@ responses:
     image: "https://i.imgur.com/nGF1K8f.jpg"
   - text: "Why did the scarecrow win an award? Because he was outstanding in his field."
   - text: "I'm reading a book on anti-gravity. It's impossible to put down."
- 
-   
+
 
   utter_did_that_help:
   - text: "Did that help you?"
 
   utter_happy:
   - text: "Great, carry on!"
-  - text: "Great, carry on!"
+  - text: "All the best !"
 
   utter_goodbye:
   - text: "Bye"
@@ -59,15 +61,18 @@ responses:
   utter_iamabot:
   - text: "I am a bot [Prepared for NLU assignment by Debonil,Ravi and Saurav ]"
   - text: "I am a bot Created by Debonil,Ravi and Saurav who are students of IIT Jodhpur"
+
   desc_person/NATIONALITY:
   - text: " {person} is {nationality} person"  
   - text: " {person} has {nationality} citizenship"
   - text: " {person} holds {nationality} passport as he is {nationality}"
+
   desc_person/PLACE_OF_RESIDENCE:
   - text: " {person} lives in {city}" 
   - text: " {person} resides in {city}"
   - text: " {person} has been living in {city}"
   - text: " {person} stays in {city}"   
+
   desc_person/DATE_OF_BIRTH:
   - text: " {person} was born on {dob}"  
   - text: "On {dob}, {person} was born" 
@@ -84,9 +89,10 @@ responses:
   - text: "{person} received their education from {organization}"
   - text: "{person} completed their studies at {organization}"
   - text: "{organization} is the educational institution that {person} attended"
+
   desc_person/PLACE_OF_BIRTH:
   - text: " {person} born at {city}"
-  - text: " {City} is {person}'s place of birth"
+  - text: " {city} is {person}'s place of birth"
   - text: " {person}'s birthplace is {city}"
 
 
@@ -96,6 +102,8 @@ actions:
   - utter_unclear
   - action_hello_world
   - action_desc_person
+  - action_person_all_details
+  - action_get_all_person_frm_releation
 
 session_config:
   session_expiration_time: 60

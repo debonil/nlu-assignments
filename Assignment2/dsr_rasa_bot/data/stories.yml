@@ -68,4 +68,24 @@ stories:
 - story: enq person PLACE_OF_BIRTH
   steps:
   - intent: query_person_PLACE_OF_BIRTH
-  - action: action_desc_person
+  - action: action_desc_person  
+  
+- story: enq person all details
+  steps:
+  - intent: query_person_all
+  - action: action_person_all_details  
+    
+- story: enq person EDUCATED_AT
+  steps:
+  - intent: get_all_person_EDUCATED_AT
+  - action: action_get_all_person_frm_releation
+
+- story: enq person PLACE_OF_RESIDENCE
+  steps:
+  - intent: get_all_person_PLACE_OF_RESIDENCE
+  - action: action_get_all_person_frm_releation
+
+- story: enquire bot
+  steps:
+  - intent: enquire_bot
+  - action: utter_iamabot

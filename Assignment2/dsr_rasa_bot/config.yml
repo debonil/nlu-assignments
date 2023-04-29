@@ -29,7 +29,7 @@ pipeline:
   - name: SpacyFeaturizer
     pooling: mean
   - name: SpacyEntityExtractor
-    dimensions: ["PERSON"]
+    dimensions: ["PERSON","ORG","GPE"]
   - name: DIETClassifier
     epochs: 100
     constrain_similarities: true

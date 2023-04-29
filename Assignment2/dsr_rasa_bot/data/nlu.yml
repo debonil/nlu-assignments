@@ -132,6 +132,31 @@ nlu:
     - where did [saurav]{"entity": "PERSON"} study ?
     - from which institution [saurav]{"entity": "PERSON"} graduated ?
 
+- intent: query_person_all
+  examples: |
+    - do you know [Juan Orozco]{"entity": "PERSON"} ?
+    - hey do you know [Johann Palisa]{"entity": "PERSON"} ?
+    - who is [saurav]{"entity": "PERSON"} ?
+    - Do you have any knowledge about a person called [Arthur Edward Ellis]{"entity": "PERSON"} ?
+    - Have you come across anyone named [debonil]{"entity": "PERSON"} ?
+    - Are you acquainted with  [Gerard Meussen]{"entity": "PERSON"} ?
+
+- intent: get_all_person_EDUCATED_AT
+  examples: |
+    - Can you tell me who all studied in [National Institute of Technology]{"entity": "ORG"} ?
+    - Can you tell me who all studied in [MIT]{"entity": "ORG"} ?
+
+- intent: get_all_person_PLACE_OF_RESIDENCE
+  examples: |
+    - Can you tell me who all resides at [Kolkata]{"entity": "GPE"} ?
+    - Can you tell me who all resides in [London]{"entity": "GPE"} ?
+
+- intent: enquire_bot
+  examples: |
+    - who are you ?
+    - are you human ?
+    - are you a bot ?
+
 - lookup: PERSON
   examples: |
     - Johann Palisa
