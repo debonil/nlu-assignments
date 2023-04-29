@@ -28,35 +28,66 @@ slots:
 responses:
   utter_greet:
   - text: "Hey! How are you?"
+  - text: "Hey! Whats up ?"
+  - text: "Hey! hope you are doing fine ?"
+  - text: "Yo, what's up? How's everything going?"
+  - text: "Hi there, how are you doing today?"
+  - text: "Hi!"
+  - text: "Hey! busy day for me, whats up ?"
+ 
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Why did the scarecrow win an award? Because he was outstanding in his field."
+  - text: "I'm reading a book on anti-gravity. It's impossible to put down."
+ 
+   
 
   utter_did_that_help:
   - text: "Did that help you?"
 
   utter_happy:
   - text: "Great, carry on!"
+  - text: "Great, carry on!"
 
   utter_goodbye:
   - text: "Bye"
+  - text: "See You"
+  - text: "Adios"
 
   utter_iamabot:
   - text: "I am a bot [Prepared for NLU assignment by Debonil,Ravi and Saurav ]"
-  
+  - text: "I am a bot Created by Debonil,Ravi and Saurav who are students of IIT Jodhpur"
   desc_person/NATIONALITY:
   - text: " {person} is {nationality} person"  
+  - text: " {person} has {nationality} citizenship"
+  - text: " {person} holds {nationality} passport as he is {nationality}"
   desc_person/PLACE_OF_RESIDENCE:
-  - text: " {person} lives in {city}"  
+  - text: " {person} lives in {city}" 
+  - text: " {person} resides in {city}"
+  - text: " {person} has been living in {city}"
+  - text: " {person} stays in {city}"   
   desc_person/DATE_OF_BIRTH:
   - text: " {person} was born on {dob}"  
+  - text: "On {dob}, {person} was born" 
+  - text: "The day {person} was born was {dob}"
+
   desc_person/EMPLOYEE_OR_MEMBER_OF:
   - text: " {person} works at {organization}"
+  - text: " {person} is employed by {organization}"
+  - text: " {person} is a member of {organization}'s staff"
+  - text: " {person} is a worker at {organization}"
+
   desc_person/EDUCATED_AT:
   - text: " {person} educated at {organization}"
+  - text: "{person} received their education from {organization}"
+  - text: "{person} completed their studies at {organization}"
+  - text: "{organization} is the educational institution that {person} attended"
   desc_person/PLACE_OF_BIRTH:
   - text: " {person} born at {city}"
+  - text: " {City} is {person}'s place of birth"
+  - text: " {person}'s birthplace is {city}"
 
 
 actions:
