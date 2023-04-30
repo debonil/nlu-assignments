@@ -8,6 +8,7 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - asking_how_are_u
   - query_person_DATE_OF_BIRTH
   - query_person_PLACE_OF_RESIDENCE
   - query_person_PLACE_OF_BIRTH
@@ -15,12 +16,15 @@ intents:
   - query_person_EMPLOYEE_OR_MEMBER_OF
   - query_person_EDUCATED_AT
   - query_person_all
+  - query_person_known_or_not
   - get_all_person_EDUCATED_AT
   - get_all_person_PLACE_OF_RESIDENCE
   - enquire_bot
 
 entities:
   - PERSON
+  - ORG
+  - GPE
 
 slots:
   PERSON:
@@ -57,6 +61,19 @@ responses:
   - text: "Bye"
   - text: "See You"
   - text: "Adios"
+
+  utter_unclear:
+  - text: "Sorry, could not get you! can you rephrase it for me?"
+  - text: "Sorry, it's not clear to me"
+
+  utter_happy_state:
+  - text: "I'm doing great!"
+  - text: "I'm doing fantastic!"
+  - text: "I'm doing splendidly!"
+  - text: "I'm doing exceptionally well!"
+  - text: "I'm doing superbly!"
+  - text: "I'm doing wonderfully!"
+  - text: "I'm doing amazing!"
 
   utter_iamabot:
   - text: "I am a bot [Prepared for NLU assignment by Debonil,Ravi and Saurav ]"
@@ -95,13 +112,32 @@ responses:
   - text: " {city} is {person}'s place of birth"
   - text: " {person}'s birthplace is {city}"
 
+  utter_person_known:
+  - text: " Yeah! I know {person}"
+  - text: " Oh, {person}? Yes, I'm familiar with them."
+  - text: " Yes, I've heard of {person}"
+  - text: " Yes, I'm acquainted with {person}"
+  - text: " Yes, I know who {person} is"
+  - text: " Yeah! I have some knowlege about {person}"
+
+
+  utter_person_unknown:
+  - text: " I'm sorry, but I'm not familiar with {person}."
+  - text: " I'm afraid I can't help you there, as I don't know who {person} is"
+  - text: " Sorry, {person} doesn't ring a bell"
+  - text: " I have no knowledge or acquaintance of {person}"
+  - text: " Regrettably, I am not acquainted with {person}."
+  - text: " Unfortunately, I am not in a position to help you with {person}, as I don't have any knowledge about him"
+
 
 actions:
   - utter_greet
   - utter_happy
   - utter_unclear
+  - utter_happy_state
   - action_hello_world
   - action_desc_person
+  - action_person_known_or_not
   - action_person_all_details
   - action_get_all_person_frm_releation
 

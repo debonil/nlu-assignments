@@ -83,6 +83,15 @@ nlu:
     - so saad
     - so sad
 
+- intent: asking_how_are_u
+  examples: |
+    - How are you ?
+    - How are you man?
+    - Hey, how are you?
+    - How are you doing?
+    - How r u?
+    - Hey, how r u?
+
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -107,32 +116,43 @@ nlu:
   examples: |
     - where does [Heraclio]{"entity": "PERSON"} live ?
     - where is the residence of [saurav]{"entity": "PERSON"} ?
-    - to which place does [saurav]{"entity": "PERSON"} belong?
+    - to which place does [Samuel]{"entity": "PERSON"} belong?
 
 - intent: query_person_PLACE_OF_BIRTH
   examples: |
-    - What is the birthplace of [saurav]{"entity": "PERSON"} ?
-    - where was [saurav]{"entity": "PERSON"} born
+    - What is the birthplace of [Samuel]{"entity": "PERSON"} ?
+    - where was [debonil]{"entity": "PERSON"} born
     - what is the native place of [saurav]{"entity": "PERSON"}
 
 - intent: query_person_NATIONALITY
   examples: |
-    - what is the nationality of [saurav]{"entity": "PERSON"} ?
+    - what is the nationality of [debonil]{"entity": "PERSON"} ?
     - to which country does [saurav]{"entity": "PERSON"} belong ?
-    - which country does [saurav]{"entity": "PERSON"} represent ?
+    - which country does [debonil]{"entity": "PERSON"} represent ?
 
 - intent: query_person_EMPLOYEE_OR_MEMBER_OF
   examples: |
     - for which company [saurav]{"entity": "PERSON"} works ?
-    - [saurav]{"entity": "PERSON"} is working for which company ?
+    - [debonil]{"entity": "PERSON"} is working for which company ?
     - who is the employer of  [saurav]{"entity": "PERSON"} ?
     
 - intent: query_person_EDUCATED_AT
   examples: |
-    - where did [saurav]{"entity": "PERSON"} study ?
-    - from which institution [saurav]{"entity": "PERSON"} graduated ?
+    - where did [Samuel]{"entity": "PERSON"} study ?
+    - from which institution [Samuel]{"entity": "PERSON"} graduated ?
+    - Can you provide information on where [Samuel]{"entity": "PERSON"} received their education?
+    - Could you tell me about the educational institution [Samuel]{"entity": "PERSON"} attended?
+    - Do you happen to know where [Samuel]{"entity": "PERSON"} studied?
+    - Could you enlighten me on where [Samuel]{"entity": "PERSON"} pursued their studies?
+    - I'm looking for information on [Samuel]{"entity": "PERSON"}'s educational background. Where did he study?
+    - Tell me where [Samuel]{"entity": "PERSON"} studied?
 
 - intent: query_person_all
+  examples: |
+    - tell me all you know about [Juan Orozco]{"entity": "PERSON"} 
+    - all you know about [Juan Orozco]{"entity": "PERSON"} 
+
+- intent: query_person_known_or_not
   examples: |
     - do you know [Juan Orozco]{"entity": "PERSON"} ?
     - hey do you know [Johann Palisa]{"entity": "PERSON"} ?

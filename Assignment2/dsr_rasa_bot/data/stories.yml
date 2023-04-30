@@ -9,6 +9,15 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: asking_how_are_u
+  - action: utter_happy_state
+  - intent: mood_great
+  - action: utter_happy
+
 - story: sad path 1
   steps:
   - intent: greet
@@ -74,6 +83,11 @@ stories:
   steps:
   - intent: query_person_all
   - action: action_person_all_details  
+    
+- story: enq person known_or_not
+  steps:
+  - intent: query_person_known_or_not
+  - action: action_person_known_or_not  
     
 - story: enq person EDUCATED_AT
   steps:
