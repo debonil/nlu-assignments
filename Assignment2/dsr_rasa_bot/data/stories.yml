@@ -9,7 +9,7 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
-- story: happy path
+- story: happy path 2
   steps:
   - intent: greet
   - action: utter_greet
@@ -103,3 +103,29 @@ stories:
   steps:
   - intent: enquire_bot
   - action: utter_iamabot
+
+
+- story: happy story block buster
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: asking_how_are_u
+  - action: utter_happy_state
+  - intent: mood_great
+  - action: utter_happy
+  - intent: query_person_known_or_not
+  - action: action_person_known_or_not 
+  - intent: query_person_PLACE_OF_RESIDENCE
+  - action: action_desc_person 
+  - intent: query_person_DATE_OF_BIRTH
+  - action: action_desc_person
+  - intent: query_person_PLACE_OF_BIRTH
+  - action: action_desc_person  
+  - intent: query_person_EDUCATED_AT
+  - action: action_desc_person
+  - intent: query_person_EMPLOYEE_OR_MEMBER_OF
+  - action: action_desc_person
+  - intent: get_all_person_EDUCATED_AT
+  - action: action_get_all_person_frm_releation
+  - intent: get_all_person_PLACE_OF_RESIDENCE
+  - action: action_get_all_person_frm_releation

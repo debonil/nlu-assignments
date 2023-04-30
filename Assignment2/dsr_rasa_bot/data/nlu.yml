@@ -115,6 +115,11 @@ nlu:
 - intent: query_person_PLACE_OF_RESIDENCE
   examples: |
     - where does [Heraclio]{"entity": "PERSON"} live ?
+    - where does [Samuel]{"entity": "PERSON"} live ?
+    - where does [saurav]{"entity": "PERSON"} live ?
+    - where does [debonil]{"entity": "PERSON"} live ?
+    - where does [Harvey Sutton]{"entity": "PERSON"} live ?
+    - where does [Timothy Melville-Ross]{"entity": "PERSON"} live ?
     - where is the residence of [saurav]{"entity": "PERSON"} ?
     - to which place does [Samuel]{"entity": "PERSON"} belong?
     - where does [Harvey Sutton]{"entity": "PERSON"} belong?
@@ -125,10 +130,13 @@ nlu:
   examples: |
     - What is the birthplace of [Samuel]{"entity": "PERSON"} ?
     - where was [debonil]{"entity": "PERSON"} born ?
+    - where was [Marie Helvin]{"entity": "PERSON"} born ?
+    - where was [Samuel]{"entity": "PERSON"} born ?
     - what is the native place of [saurav]{"entity": "PERSON"}
     - In which place was [Harvey Sutton]{"entity": "PERSON"} born ?
     - At which location was [Abdullah bin Mohammed bin Saud Al Than]{"entity": "PERSON"} born?
     - Can you tell me the specific area where [Timothy Melville-Ross]{"entity": "PERSON"} was born ?
+
 - intent: query_person_NATIONALITY
   examples: |
     - what is the nationality of [debonil]{"entity": "PERSON"} ?
@@ -137,6 +145,7 @@ nlu:
     - In which place was [Harvey Sutton]{"entity": "PERSON"} stay ?
     - At which location was [Abdullah bin Mohammed bin Saud Al Than]{"entity": "PERSON"} belong to ?
     - Can you tell me the specific area where [Timothy Melville-Ross]{"entity": "PERSON"} lives ?
+
 - intent: query_person_EMPLOYEE_OR_MEMBER_OF
   examples: |
     - for which company [saurav]{"entity": "PERSON"} works ?
@@ -148,6 +157,7 @@ nlu:
     - In which office or workplace is [Prokhorov]{"entity": "PERSON"} employed?
     - Can you tell me where [S.M. Bhatt]{"entity": "PERSON"} is currently employed?
     - What is the name of the employer or workplace where [Ziad Makhzoumi]{"entity": "PERSON"} is currently working?
+
 - intent: query_person_EDUCATED_AT
   examples: |
     - where did [Samuel]{"entity": "PERSON"} study ?
@@ -168,9 +178,14 @@ nlu:
     - Could you give me some details about  [S.M. Bhatt]{"entity": "PERSON"}'s biography?
     - Can you share any information about [Ziad Makhzoumi]{"entity": "PERSON"}'s history and experiences?
     - I'm interested in learning more about [Ziad Makhzoumi]{"entity": "PERSON"}. What information can you provide me with?
+
 - intent: query_person_known_or_not
   examples: |
     - do you know [Juan Orozco]{"entity": "PERSON"} ?
+    - Hey do you know [debonil]{"entity": "PERSON"} ?
+    - Hey do you know [Samuel S. Chen]{"entity": "PERSON"} ?
+    - Hey do you know [ravi]{"entity": "PERSON"} ?
+    - Hey do you know [Juan Orozco]{"entity": "PERSON"} ?
     - hey do you know [Johann Palisa]{"entity": "PERSON"} ?
     - who is [saurav]{"entity": "PERSON"} ?
     - Do you have any knowledge about a person called [Arthur Edward Ellis]{"entity": "PERSON"} ?
