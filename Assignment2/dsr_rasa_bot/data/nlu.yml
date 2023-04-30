@@ -117,26 +117,37 @@ nlu:
     - where does [Heraclio]{"entity": "PERSON"} live ?
     - where is the residence of [saurav]{"entity": "PERSON"} ?
     - to which place does [Samuel]{"entity": "PERSON"} belong?
+    - where does [Harvey Sutton]{"entity": "PERSON"} belong?
+    - [Timothy Melville-Ross]{"entity": "PERSON"} is residing in which place ?
+    - In which Place [بد الله بن محمد بن سعود آل ثاني]{"entity":"PERSON"} lives ?
 
 - intent: query_person_PLACE_OF_BIRTH
   examples: |
     - What is the birthplace of [Samuel]{"entity": "PERSON"} ?
     - where was [debonil]{"entity": "PERSON"} born ?
     - what is the native place of [saurav]{"entity": "PERSON"}
-
+    - In which place was [Harvey Sutton]{"entity": "PERSON"} born ?
+    - At which location was [Abdullah bin Mohammed bin Saud Al Than]{"entity": "PERSON"} born?
+    - Can you tell me the specific area where [Timothy Melville-Ross]{"entity": "PERSON"} was born ?
 - intent: query_person_NATIONALITY
   examples: |
     - what is the nationality of [debonil]{"entity": "PERSON"} ?
     - to which country does [saurav]{"entity": "PERSON"} belong ?
     - which country does [debonil]{"entity": "PERSON"} represent ?
-
+    - In which place was [Harvey Sutton]{"entity": "PERSON"} stay ?
+    - At which location was [Abdullah bin Mohammed bin Saud Al Than]{"entity": "PERSON"} belong to ?
+    - Can you tell me the specific area where [Timothy Melville-Ross]{"entity": "PERSON"} lives ?
 - intent: query_person_EMPLOYEE_OR_MEMBER_OF
   examples: |
     - for which company [saurav]{"entity": "PERSON"} works ?
     - [debonil]{"entity": "PERSON"} is working for which company ?
     - who is the employer of [saurav]{"entity": "PERSON"} ?
     - where does [ravi]{"entity": "PERSON"} work ?
-    
+    - What is [Harvey Sutton]{"entity": "PERSON"}'s place of employment?
+    - At which company or organization does [Abdullah bin Mohammed bin Saud Al Than]{"entity": "PERSON"} work?
+    - In which office or workplace is [Prokhorov]{"entity": "PERSON"} employed?
+    - Can you tell me where [S.M. Bhatt]{"entity": "PERSON"} is currently employed?
+    - What is the name of the employer or workplace where [Ziad Makhzoumi]{"entity": "PERSON"} is currently working?
 - intent: query_person_EDUCATED_AT
   examples: |
     - where did [Samuel]{"entity": "PERSON"} study ?
@@ -152,7 +163,11 @@ nlu:
   examples: |
     - tell me all you know about [Juan Orozco]{"entity": "PERSON"} 
     - all you know about [Juan Orozco]{"entity": "PERSON"} 
-
+    - Can you provide me with some background information on [Samuel]{"entity": "PERSON"} ?
+    - What do you know about [Abdullah bin Mohammed bin Saud Al Than]{"entity": "PERSON"}'s personal and professional life?
+    - Could you give me some details about  [S.M. Bhatt]{"entity": "PERSON"}'s biography?
+    - Can you share any information about [Ziad Makhzoumi]{"entity": "PERSON"}'s history and experiences?
+    - I'm interested in learning more about [Ziad Makhzoumi]{"entity": "PERSON"}. What information can you provide me with?
 - intent: query_person_known_or_not
   examples: |
     - do you know [Juan Orozco]{"entity": "PERSON"} ?
@@ -166,11 +181,20 @@ nlu:
   examples: |
     - Can you tell me who all studied in [National Institute of Technology]{"entity": "ORG"} ?
     - Can you tell me who all studied in [MIT]{"entity": "ORG"} ?
-
+    - Could you tell me about [Gerard Meussen]{"entity": "PERSON"'s educational history?
+    - What institutions or schools did [Arthur Edward Ellis]{"entity": "PERSON"} attend?
+    - Can you provide me with a list of [S.M. Bhatt]{"entity": "PERSON"}'s educational qualifications and degrees?
+    - I'm interested in learning about [Ziad Makhzoumi]{"entity": "PERSON"}'s academic background. Could you give me some information?
+    - Would you happen to know where [Harvey Sutton]{"entity": "PERSON"} received their education and what degrees they obtained?
 - intent: get_all_person_PLACE_OF_RESIDENCE
   examples: |
     - Can you tell me who all resides at [Kolkata]{"entity": "GPE"} ?
     - Can you tell me who all resides in [London]{"entity": "GPE"} ?
+    - Can you provide me with a list of people who reside at [Nigeria]{"entity": "GPE"}?
+    - Who are the current residents of [New York]{"entity": "GPE"}?
+    - Could you tell me who lives at [London]{"entity": "GPE"} and their contact information?
+    - I'm interested in learning about the demographics of the residents at [Wills]{"entity": "GPE"}. Can you give me some information?
+    - Would you happen to know who the inhabitants of [London]{"entity": "GPE"} are?
 
 - intent: enquire_bot
   examples: |
