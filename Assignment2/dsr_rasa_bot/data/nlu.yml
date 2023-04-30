@@ -121,7 +121,7 @@ nlu:
 - intent: query_person_PLACE_OF_BIRTH
   examples: |
     - What is the birthplace of [Samuel]{"entity": "PERSON"} ?
-    - where was [debonil]{"entity": "PERSON"} born
+    - where was [debonil]{"entity": "PERSON"} born ?
     - what is the native place of [saurav]{"entity": "PERSON"}
 
 - intent: query_person_NATIONALITY
@@ -134,7 +134,8 @@ nlu:
   examples: |
     - for which company [saurav]{"entity": "PERSON"} works ?
     - [debonil]{"entity": "PERSON"} is working for which company ?
-    - who is the employer of  [saurav]{"entity": "PERSON"} ?
+    - who is the employer of [saurav]{"entity": "PERSON"} ?
+    - where does [ravi]{"entity": "PERSON"} work ?
     
 - intent: query_person_EDUCATED_AT
   examples: |
