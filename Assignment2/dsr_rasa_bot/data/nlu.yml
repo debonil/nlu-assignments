@@ -125,6 +125,9 @@ nlu:
     - where does [Harvey Sutton]{"entity": "PERSON"} belong?
     - [Timothy Melville-Ross]{"entity": "PERSON"} is residing in which place ?
     - In which Place [بد الله بن محمد بن سعود آل ثاني]{"entity":"PERSON"} lives ?
+    - Do you know where [Harvey Sutton]{"entity": "PERSON"} lives?
+    - Do you know where [Timothy Melville-Ross]{"entity": "PERSON"} lives?
+    - Do you know where [saurav]{"entity": "PERSON"} lives?
 
 - intent: query_person_PLACE_OF_BIRTH
   examples: |
@@ -145,6 +148,9 @@ nlu:
     - In which place was [Harvey Sutton]{"entity": "PERSON"} stay ?
     - At which location was [Abdullah bin Mohammed bin Saud Al Than]{"entity": "PERSON"} belong to ?
     - Can you tell me the specific area where [Timothy Melville-Ross]{"entity": "PERSON"} lives ?
+    - what is [Harvey Sutton]{"entity": "PERSON"} nationality ?
+    - what is [Abdullah bin Mohammed bin Saud Al Than]{"entity": "PERSON"} nationality ?
+    - what is [Timothy Melville-Ross]{"entity": "PERSON"} nationality ?
 
 - intent: query_person_EMPLOYEE_OR_MEMBER_OF
   examples: |
@@ -171,6 +177,11 @@ nlu:
 
 - intent: query_person_all
   examples: |
+    - Who is [Juan Orozco]{"entity": "PERSON"} 
+    - Who is [Debonil]{"entity": "PERSON"} 
+    - Who is [Ziad Makhzoumi]{"entity": "PERSON"} 
+    - Who is [Saurav]{"entity": "PERSON"} 
+    - Who is [Samuel]{"entity": "PERSON"} 
     - tell me all you know about [Juan Orozco]{"entity": "PERSON"} 
     - all you know about [Juan Orozco]{"entity": "PERSON"} 
     - Can you provide me with some background information on [Samuel]{"entity": "PERSON"} ?
@@ -196,11 +207,24 @@ nlu:
   examples: |
     - Can you tell me who all studied in [National Institute of Technology]{"entity": "ORG"} ?
     - Can you tell me who all studied in [MIT]{"entity": "ORG"} ?
-    - Could you tell me about [Gerard Meussen]{"entity": "PERSON"'s educational history?
+    - Could you tell me about [Gerard Meussen]{"entity": "PERSON"}'s educational history?
     - What institutions or schools did [Arthur Edward Ellis]{"entity": "PERSON"} attend?
     - Can you provide me with a list of [S.M. Bhatt]{"entity": "PERSON"}'s educational qualifications and degrees?
     - I'm interested in learning about [Ziad Makhzoumi]{"entity": "PERSON"}'s academic background. Could you give me some information?
     - Would you happen to know where [Harvey Sutton]{"entity": "PERSON"} received their education and what degrees they obtained?
+
+- intent: get_all_person_EMPLOYEE_OR_MEMBER_OF
+  examples: |
+    - Can you tell me who all work in [National Institute of Technology]{"entity": "ORG"} ?
+    - Can you tell me who all work in [MIT]{"entity": "ORG"} ?
+    - Could you tell me about [Gerard Meussen]{"entity": "PERSON"}'s employment history?
+    - who all work in [National Institute of Technology]{"entity": "ORG"} ?
+    - who all work in [MIT]{"entity": "ORG"} ?
+    - Do you know who all employees of [MIT]{"entity": "ORG"} ?
+    - Do you know who all employees of [MIT]{"entity": "ORG"} ?
+    - Do you know who all members of [MIT]{"entity": "ORG"} ?
+    - Do you know who all members of [MIT]{"entity": "ORG"} ?
+
 - intent: get_all_person_PLACE_OF_RESIDENCE
   examples: |
     - Can you tell me who all resides at [Kolkata]{"entity": "GPE"} ?

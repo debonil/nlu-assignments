@@ -199,7 +199,7 @@ class ActionPersonInKnowledgeOrNot(Action):
         print(f'response ==> {result}')
 
         if person != None:
-            if result != None:
+            if result :
                 dispatcher.utter_message(response="utter_person_known",
                                          person=person)
             else:
