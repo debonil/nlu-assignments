@@ -30,6 +30,17 @@ nlu:
     - bye bye
     - see you later
 
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - thanks a lot
+    - thank u
+    - Thank you!
+    - Thanks a million!
+    - Much obliged!
+    - Thanks a million!
+
 - intent: affirm
   examples: |
     - yes
@@ -207,11 +218,10 @@ nlu:
   examples: |
     - Can you tell me who all studied in [National Institute of Technology]{"entity": "ORG"} ?
     - Can you tell me who all studied in [MIT]{"entity": "ORG"} ?
-    - Could you tell me about [Gerard Meussen]{"entity": "PERSON"}'s educational history?
-    - What institutions or schools did [Arthur Edward Ellis]{"entity": "PERSON"} attend?
-    - Can you provide me with a list of [S.M. Bhatt]{"entity": "PERSON"}'s educational qualifications and degrees?
-    - I'm interested in learning about [Ziad Makhzoumi]{"entity": "PERSON"}'s academic background. Could you give me some information?
-    - Would you happen to know where [Harvey Sutton]{"entity": "PERSON"} received their education and what degrees they obtained?
+    - who studied in [MIT]{"entity": "ORG"} ?
+    - who all studied in [MIT]{"entity": "ORG"} ?
+    - tell me who all studied in [MIT]{"entity": "ORG"} ?
+    - list out who all studied in [MIT]{"entity": "ORG"} ?
 
 - intent: get_all_person_EMPLOYEE_OR_MEMBER_OF
   examples: |
@@ -234,6 +244,38 @@ nlu:
     - Could you tell me who lives at [London]{"entity": "GPE"} and their contact information?
     - I'm interested in learning about the demographics of the residents at [Wills]{"entity": "GPE"}. Can you give me some information?
     - Would you happen to know who the inhabitants of [London]{"entity": "GPE"} are?
+
+- intent: get_all_person_PLACE_OF_BIRTH
+  examples: |
+    - Can you tell me who all born at [Kolkata]{"entity": "GPE"} ?
+    - Can you tell me who all born in [London]{"entity": "GPE"} ?
+    - Can you provide me with a list of people who born at [Nigeria]{"entity": "GPE"}?
+    - Who are the born of [New York]{"entity": "GPE"}?
+    - Could you tell me who born at [London]{"entity": "GPE"} and their contact information?
+    - Would you happen to know who all born of [London]{"entity": "GPE"} are?
+
+- intent: get_all_person_DATE_OF_BIRTH
+  examples: |
+    - Can you tell me who all born at [1990]{"entity": "DATE"} ?
+    - Can you tell me who all born in [18th June]{"entity": "DATE"} ?
+    - Can you provide me with a list of people who born at [15th Dec 1992]{"entity": "DATE"}?
+    - Who are the born of [July 98]{"entity": "DATE"}?
+    - Could you tell me who born at [5th of January]{"entity": "DATE"} and their contact information?
+    - Would you happen to know who all born of [February]{"entity": "DATE"} are?
+
+- intent: get_all_person_NATIONALITY
+  examples: |
+    - who are [American]{"entity": "PERSON"} ?
+    - who are [American]{"entity": "PERSON"}s ?
+    - who all are [American]{"entity": "PERSON"} ?
+    - who all are [American]{"entity": "PERSON"}s ?
+    - list out who all are [American]{"entity": "PERSON"} ?
+    - list out who all are [American]{"entity": "PERSON"}s ?
+    - tell me who all are [American]{"entity": "PERSON"} ?
+    - Can you tell me who all are [American]{"entity": "PERSON"} ?
+    - Can you tell me who all are [Nigerian]{"entity": "PERSON"} ?
+    - Can you tell me who all are [Indian]{"entity": "PERSON"} ?
+
 
 - intent: enquire_bot
   examples: |

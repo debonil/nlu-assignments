@@ -29,7 +29,7 @@ def get_person_details_by_rel(person_name="Heraclio", properrty_name="NATIONALIT
     driver = GraphDatabase.driver(uri, auth=(
         username, password), encrypted=False)
     with driver.session(database=database) as session:
-        query = f" MATCH (n:Person)-[:{properrty_name}]->(r) WHERE n.name CONTAINS '{person_name}'  RETURN r.name "
+        query = f" MATCH (n:Person)-[:{properrty_name}]->(r) WHERE toLower(n.name) CONTAINS toLower('{person_name}')  RETURN r.name "
         print(query)
         info = session.run(query)
         list_values = info.values()
@@ -53,7 +53,7 @@ def get_all_persons_related_to(obj_related_to, relation_type):
     driver = GraphDatabase.driver(uri, auth=(
         username, password), encrypted=False)
     with driver.session(database=database) as session:
-        query = f"  MATCH (n:Organization|Location|Date)<-[:{relation_type}]-(r:Person) WHERE n.name CONTAINS '{obj_related_to}' RETURN r.name  "
+        query = f"  MATCH (n:Organization|Location|Date)<-[:{relation_type}]-(r:Person) WHERE toLower(n.name) CONTAINS toLower('{obj_related_to}') RETURN r.name  "
         print(query)
         info = session.run(query)
         list_values = info.values()
@@ -101,7 +101,7 @@ def does_person_exists(person_name):
     driver = GraphDatabase.driver(uri, auth=(
         username, password), encrypted=False)
     with driver.session(database=database) as session:
-        query = f"MATCH (n:Person) WHERE n.name CONTAINS '{person_name}' RETURN n.name"
+        query = f"MATCH (n:Person) WHERE toLower(n.name) CONTAINS toLower('{person_name}') RETURN n.name"
         print(query)
         info = session.run(query)
         list_values = info.values()

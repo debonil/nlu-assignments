@@ -8,6 +8,8 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
+  - intent: thanks
+  - action: utter_welcome
 
 - story: happy path 2
   steps:
@@ -27,6 +29,8 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
+  - intent: thanks
+  - action: utter_welcome
 
 - story: sad path 2
   steps:
@@ -97,6 +101,26 @@ stories:
 - story: enq person PLACE_OF_RESIDENCE
   steps:
   - intent: get_all_person_PLACE_OF_RESIDENCE
+  - action: action_get_all_person_frm_releation
+
+- story: enq person EMPLOYEE_OR_MEMBER_OF
+  steps:
+  - intent: get_all_person_EMPLOYEE_OR_MEMBER_OF
+  - action: action_get_all_person_frm_releation
+
+- story: enq person NATIONALITY
+  steps:
+  - intent: get_all_person_NATIONALITY
+  - action: action_get_all_person_frm_releation
+
+- story: enq person PLACE_OF_BIRTH
+  steps:
+  - intent: get_all_person_PLACE_OF_BIRTH
+  - action: action_get_all_person_frm_releation
+
+- story: enq person DATE_OF_BIRTH
+  steps:
+  - intent: get_all_person_DATE_OF_BIRTH
   - action: action_get_all_person_frm_releation
 
 - story: enquire bot

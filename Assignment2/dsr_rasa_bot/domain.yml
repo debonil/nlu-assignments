@@ -5,6 +5,7 @@ intents:
   - goodbye
   - affirm
   - deny
+  - thanks
   - mood_great
   - mood_unhappy
   - bot_challenge
@@ -19,12 +20,17 @@ intents:
   - query_person_known_or_not
   - get_all_person_EDUCATED_AT
   - get_all_person_PLACE_OF_RESIDENCE
+  - get_all_person_DATE_OF_BIRTH
+  - get_all_person_PLACE_OF_BIRTH
+  - get_all_person_NATIONALITY
+  - get_all_person_EMPLOYEE_OR_MEMBER_OF
   - enquire_bot
 
 entities:
   - PERSON
   - ORG
   - GPE
+  - DATE
 
 slots:
   PERSON:
@@ -65,6 +71,14 @@ responses:
   utter_unclear:
   - text: "Sorry, could not get you! can you rephrase it for me?"
   - text: "Sorry, it's not clear to me"
+
+  utter_welcome:
+  - text: "You're welcome! How may I assist you today?"
+  - text: "My pleasure! How may I assist you today?"
+  - text: "No problem! How may I assist you today?"
+  - text: "It was my pleasure! How may I assist you today?"
+  - text: "Glad to help! How may I assist you today?"
+  - text: "Thank you for the opportunity to assist you"
 
   utter_happy_state:
   - text: "I'm doing great!"
